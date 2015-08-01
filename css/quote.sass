@@ -1,0 +1,386 @@
+@import "modules/reset.sass"
+@import "modules/text.sass"
+@import "modules/nav.sass"
+@import "modules/effects.sass"
+
+$navHeight: 55px
+
+
+.nav-quote
+  border-color: #2c4151
+
+.form-wrapper
+  position: relative
+  height: 100%
+
+.err-txt
+  color: red
+  display: inline-block
+  font-style: italic
+  margin-top: 1em
+
+
+
+.q-wrapper
+  width: 100%
+  text-align: center
+
+  > h1
+    padding-bottom: .5em
+
+  > h2
+    padding-bottom: .85em
+
+
+// .q-options
+//   display: flex
+
+.q-lrg
+  
+  width: 85%
+  margin: 0 auto
+
+  
+ 
+
+.q-model
+  display: flex
+  justify-content: space-around
+  align-items: stretch
+
+.model
+  position: relative
+  width: 22%
+  height: 54vh
+  max-height: 30vw
+
+.model-img
+  display: block
+  margin: 0 auto
+  max-width: 90%
+  max-height: 90%
+  padding: .85em
+  box-sizing: border-box
+
+.model-img.six
+  max-height: 95%
+
+.model-img.sixp
+  max-height: 100%
+
+
+.form-optn
+
+  display: block
+  box-sizing: border-box
+
+  background-color: #fff
+
+  border-width: 1px 
+  border-style: solid
+  border-color: rgb(232, 232, 232)
+  border-radius: 5px
+  
+  transition: all .2s ease-in-out
+
+  > span
+    transition: all .2s ease-in-out
+
+
+
+.txt-container
+  width: 85%
+  
+  margin: .75em auto 0 auto
+  padding-top: 1em
+  box-sizing: border-box
+
+
+  border-top: 1px solid rgb(199, 197, 197)
+
+  text-align: center
+
+  > span
+    display: inline-block
+    width: 25%
+    
+
+.quote-btn, .ans-btn, .dmg-btn
+  display: inline-block
+  width: 100%
+
+
+  margin-bottom: .5em
+  padding: 1em 0em
+
+.quote-btn:last-of-type
+  margin-bottom: 0
+
+
+
+.carrier-img
+  display: block
+  max-width: 100%
+  padding-bottom: 1em
+  height: 11vh
+  max-height: 145px
+  margin: 0 auto
+
+.verizon-img
+  max-height: 60px !important
+
+.q-sml
+  max-width: 450px
+  width: 95%
+  margin: 0 auto
+
+
+
+
+.quote-col-sml
+  max-width: 300px
+  width: 45%
+
+.quote-col-ex-sml
+  width: 29%
+
+// .quote-btn, .ans-btn, .wtr-btn, .ntwrk-btn
+//   display: block
+//   padding: 1.5em 2em
+//   margin: 1.25em 0
+//   width: 100%
+//   box-sizing: border-box
+
+
+.quote-col-lrg
+  max-width: 1000px
+  width: 95%
+  margin: 0 auto
+
+.carrier-col
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+.carrier-btn
+  width: 24%
+  margin-right: 1%
+
+  &:nth-child(4)
+    margin-right: 0
+  &:nth-child(7)
+    margin-right: 0
+    margin-bottom: .5em
+
+.silver-txt
+  color: #949494
+
+.gold-txt
+  color: #E4A21D
+
+.yes-btn
+  color: #53C346
+.no-btn
+  color: #D76969
+.idk-btn
+  color: #DDA134
+
+
+.ans-container
+  display: flex
+  justify-content: space-around
+  width: 95%
+  max-width: 710px
+  margin: 0 auto
+
+  h3
+    padding-bottom: 1em
+
+
+.ans-container-med
+  display: flex
+  justify-content: space-around
+  width: 95%
+  max-width: 775px
+  margin: 0 auto
+
+  h3
+    padding-bottom: 1em
+
+.dmg-container  
+  display: flex
+  justify-content: space-around
+  width: 95%
+  max-width: 1000px
+  margin: 0 auto
+
+  > .dmg-item
+    width: 23%
+    margin-right: 1.25%
+
+    > label
+      display: inline-block
+      width: 85%
+
+      padding-bottom: .5em
+      margin-bottom: .5em
+
+      border-bottom: 1px solid #D7D7D7
+      
+    > span
+      color: #405a70
+      background-color: #fff
+
+.next
+  background-color: #fff
+  color: #3C3C3C
+  border: 1px solid #D7D7D7
+  border-radius: 5px
+  padding: .75em 7em
+  margin-top: 2.5em
+  margin-left: 1.75em
+  transition: border-color .2s ease-in-out
+
+  &:hover
+    border-color: #f26ae9
+
+.review-header
+  padding-bottom: .3em
+  border-bottom: 1px solid #D7D7D7
+  max-width: 900px
+  margin: 0 auto .8em auto
+
+.review-container
+  display: flex
+  align-items: center
+  width: 95%
+  max-width: 1000px
+  margin: 0 auto
+
+  > .left-review
+    position: relative
+    width: 50%
+  
+  > .right-review
+    width: 50%
+    height: 100%
+
+    > ul
+      padding: 2em
+      line-height: 185%
+      font-size: 1.4rem
+
+      > li
+        color: rgb(242, 68, 68)
+
+    > button
+      margin-top: 0
+
+.detail-block
+  position: relative
+  height: 62vh
+  min-height: 360px
+  max-height: 500px
+
+  // backround image set in JS
+  background-repeat: no-repeat
+  background-position: 50% 0%
+  background-size: auto 100%
+
+  // > h5
+  //   position: absolute
+  //   color: white
+
+  //   bottom: 50%
+  //   right: 50%
+  //   transform: translate(51%, -300%)
+
+  > ul
+    position: absolute
+
+    bottom: 50%
+    right: 50%
+    transform: translate(51%, 50%)
+    padding: 1.5em 1em
+    
+    line-height: 250%
+
+    border: 1px solid #444
+    border-radius: 5px
+
+    > li:first-of-type
+      padding-bottom: .5em
+
+    > li
+      display: block
+
+      margin: 0 auto
+
+      color: #C7C7C7
+
+
+.submit
+  margin-left: 1em
+  padding: .75em 6em
+
+  background-color: #fff
+
+  border: 1px solid #D7D7D7
+  border-radius: 5px
+
+  transition: border-color .2s ease-in-out
+
+  &:hover
+    border-color: #f26ae9
+
+.review-model
+  position
+
+
+
+
+
+.back
+  background-color: #fff
+  color: #3C3C3C
+  border: 1px solid #D7D7D7
+  border-radius: 5px
+  padding: .75em 3em
+  margin-top: 1.8em
+  transition: border-color .2s ease-in-out
+
+  &:hover
+    border-color: #818181
+
+
+
+
+
+
+
+.product-container
+  display: flex
+
+  width: 95%
+  max-width: 1100px
+
+  height: 60vh
+  max-height: 30vw
+  
+
+  margin: 0 auto
+
+  > .product
+    width: 25%
+    background-color: grey
+    text-align: center
+
+.base-txt
+  color: #D82020
+
+.price-txt
+  color: rgb(64, 90, 112)
+  font-size: 115%
+
+.discount-txt
+  color: #5cb26a

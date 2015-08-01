@@ -1,0 +1,87 @@
+extends ./modules/base.jade
+
+block title
+  title TellyEx | Welcome
+
+block append style
+  link(href='css/index.css', rel='stylesheet', type='text/css')
+
+
+block content
+
+  include ./modules/pullup.jade
+  include ./modules/nav.jade
+
+  .intro-wrapper
+    .intro-content.c-wrapper
+      .left
+        h1.page-title Have One Of These?
+        span.page-subtitle We Can Help
+      .right
+        img(class="brkn-phn-img", src="images/brkn-phn.svg", alt="Broken Smartphone")
+  
+  .blue-bar.full-width
+    .blue-bar-container
+      .blue-bar-content
+        span.blue-bar-txt Fill Out Our Form
+        img(class="blue-bar-img", src="images/fill-form.svg", alt="Fill Out A Form")
+        
+      .blue-bar-content
+        span.blue-bar-txt We'll Send You A Phone
+        img(class="blue-bar-img", src="images/phn-to-you.svg", alt="Send Us Your Phone")
+        
+      .blue-bar-content
+        span.blue-bar-txt You Send Us Yours Back
+        img(Class="blue-bar-img", src="images/phn-to-us.svg", alt="We'll Send You A New One")
+        
+  .c-wrapper.exchange
+    .left
+      h1.content-header
+        | We Want To 
+        span.blue-txt { Exchange }
+        |  Your Broken Smartphone
+      span
+        | You fill out 
+        a(href="##quote##").pink-link our form
+        |  and let us know what's broken, and we'll give you an offer to purchase it right on the spot.<br><br>
+        span 
+          | How Exactly Does It Work?<br><br>
+          | We calculate a personalized offer for your phone based on its
+          | current condition and the models market value.<br><br>
+          | We then give you three options<br>
+          | 1. Purchase a replacement device directly from us at a discounted price<br>
+          | 2. Take a cash payment through mailed check or electronic payment<br>
+          | 3. Donate the amount to a charity you pick
+    .right
+      img(src="images/telly-logo.svg", alt="TellyEx Logo Phone")
+
+  .c-wrapper.flowchart
+    .left
+      img.flow-img(src="images/vertical-breakdown.svg", alt="The TellyEx Flowchart")
+    .right
+      h1.content-header 
+        | It Works Out For Everyone 
+      p
+        | You don't have to go through the pain of replacing your borken phone.<br><br>
+        | We don't have to go through the pain of finding broken phones.<br><br>
+        | The Earth doesn't have to go through the pain of creating new phones.
+      h1.content-header
+        | It's A Three Step Process
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br><br>
+        | 1. fugiat nulla pariatur. Excepteur sint occaecat cupidatat<br>
+        | 2. sunt in culpa quisa eius modi tempora incidunt ut<br>
+        | 3. velit esse cillum dolore eu fugiat nulla pariatu<br><br>
+        | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+      h1.content-header
+        | We Want To Keep Phones Out Of Landfills
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br><br>
+        | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa quisa eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+
+  .orange-bar 
+    h1 We Both Know It's Time To Get Rid Of That Broken Phone
+    span.page-subtitle 
+      | You're just a few clicks away. Let us 
+      a(href="quote").orng-link show you
+      | .

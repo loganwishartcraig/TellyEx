@@ -1,0 +1,55 @@
+extends ./modules/base.jade
+
+block title
+  title TellyEx | Who We Are
+
+block append style
+  link(href='css/about.css', rel='stylesheet', type='text/css')
+
+
+block content
+
+  include ./modules/pullup.jade
+  include ./modules/nav.jade
+
+  .wrapper
+    .black-bar.v-align-p.txt-align-c
+      .v-align-c
+        h1.telly Telly
+          span.ex Ex
+          span.change [change]
+        span.intro-txt
+          | We are a small smartphone refurbishing company aiming to be the best in the business
+        
+
+    .split-center.care
+      h1 We care about two things.
+      .rw1.care-cont
+        .col1.care-col
+          h2 You
+          .care-img-cont.img1
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquipunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqu
+
+        .col2.care-col
+          h2 The Planet
+          .care-img-cont.img2
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquipunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremqu
+
+    h1.green-box We're here to give you a great price for your broken phone, and provide an environmentally councious replacement
+
+    .hist-container
+      img(src="images/telly-banner.svg").banner-img
+      h1 Our History
+      p 
+        | Vis nostro menandri persequeris in, has id altera singulis percipitur.Modo sonet ad eum, cum eu prompta laboramus. Ius partem volumus at, mutat soleat mnesarchum nam et. Et duo sumo natum scripserit, no euismod dissentiunt consectetuer mea. No duo vide ludus invidunt, ut eam wisi harum delenit, cu postea possit oporteat usu.<br><br>
+        | Et debet congue quaeque vel, id stet virtute habemus vim. Prima inimicus qui an, mea id movet aliquam delicatissimi. Paulo legere ei vim. Sed ne latine commune, omnium minimum vel an.<br><br>
+        | An cum tantas menandri. Ex eum vide harum dolore, cu pri impedit platonem. Mei graeci iudicabit ex, molestie appellantur in mel, ius in solum iracundia. Qui quaeque delicatissimi ut, at alterum euismod platonem his. Ea est elit novum nemore, eum et movet principes. Ne per dicam facilisis.
+      h1 Our Promise To You
+      p 
+        | Vis nostro menandri persequeris in, has id altera singulis percipitur.Modo sonet ad eum, cum eu prompta laboramus. Ius partem volumus at, mutat soleat mnesarchum nam et. Et duo sumo natum scripserit, no euismod dissentiunt consectetuer mea. No duo vide ludus invidunt, ut eam wisi harum delenit, cu postea possit oporteat usu.<br><br>
+        | Et debet congue quaeque vel, id stet virtute habemus vim. Prima inimicus qui an, mea id movet aliquam delicatissimi. Paulo legere ei vim. Sed ne latine commune, omnium minimum vel an.<br><br>
+        | An cum tantas menandri. Ex eum vide harum dolore, cu pri impedit platonem. Mei graeci iudicabit ex, molestie appellantur in mel, ius in solum iracundia. Qui quaeque delicatissimi ut, at alterum euismod platonem his. Ea est elit novum nemore, eum et movet principes. Ne per dicam facilisis.
+
+    .cta-container
+      a(href="what#fqa").pink-link How Do We Do It?
+      a(href="quote").pink-link Ready For A Quote?

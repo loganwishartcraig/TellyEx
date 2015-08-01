@@ -1,0 +1,62 @@
+
+.nav
+  display: flex
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 98
+  width: 100%
+  height: 55px
+  background-color: #405A70
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.65)
+
+.te-cont
+  display: table
+  width: 15%
+  height: 100%
+  text-align: center
+  background-color: #282828
+
+.colr1
+  width: 2%
+  height: 100%
+  background-color: #606060
+
+.colr2
+  width: 2%
+  height: 100%
+  background-color: #8d8d8d
+
+.colr3
+  width: 2%
+  height: 100%
+  background-color: #5f84a4
+
+.nav-container
+  flex-grow: 5
+  align-self: flex-end
+  text-align: right
+  height: 60%
+  padding-right: 2em
+
+.nav-item
+  display: inline-block
+  color: #a3cced
+  padding: 0 1.6em
+  margin: 0 1.2em
+  box-sizing: border-box
+  height: 100%
+  transition: border 0.2s ease-in-out, color 0.2s ease-in-out
+  border-bottom: 0px solid transparent
+  &:hover
+    border-bottom: 5px solid #7ea0bc
+  &:active
+    border-bottom: 5px solid #83afd1
+    color: #83afd1
+
+
+.nav-actv
+  border-bottom: 5px solid #244159
+
+.navf
+  margin-left: 0

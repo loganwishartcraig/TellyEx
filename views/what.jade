@@ -1,0 +1,102 @@
+extends ./modules/base.jade
+
+block title
+  title TellyEx | What We Do
+
+block append style
+  link(href='css/what.css', rel='stylesheet', type='text/css')
+
+block append scripts
+  script(src='js/fqa.js')
+
+block content
+
+  include ./modules/pullup.jade
+  include ./modules/nav.jade
+
+  .wrapper
+    .what-intro
+      h1 TellyEx Is A Smartphone Exchange Service
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+      img(src="images/telly-process.svg", alt="The TellyEx Process")
+
+    .process-container
+      h1 The Process Works Like This
+      .process-item
+        h2 You Break Your Phone
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+        img(src="images/you-break-yours.svg", alt="You Break Your Phone")
+      .process-item
+        h2 You Tell Us What’s Broken
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam ed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+        img(src="images/tell-us.svg", alt="You Tell Us What's Wrong")
+      .process-item
+        h2 We'll Offer To Exchange It
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam ed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Ut enim ad minim veniam ed do eiusmod tempor incididun
+        img(src="images/process-steps.svg", alt="We'll exchange it for you").process-steps-img
+
+
+
+
+        //CHANGE href to name
+        //CHANGE pullup to slight raise hover, full raise click
+        //FIX main page image svg size
+        //ADD line to logo banner
+
+
+
+    .fqa-container#fqa
+      h1 Frequently Asked Questions
+      span.fqa-instruct Click One Of The Items Below To Learn More About It
+      ul
+        li.fqa-q#value
+          h3.abel-txt How do you value my phone?
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+        li.fqa-q#old-phone
+          h3.abel-txt What do you do with my old phone?
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+        li.fqa-q#quality
+          h3.abel-txt How do you ensure your products quality?
+          p Lorem ipsum elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+        li.fqa-q#cost
+          h3.abel-txt What does the service cost?
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna dolore magna aliqua. Ut enim ad minim veniam, aliqua. Ut enim ad minim veniam,  
+        li.fqa-q#payment
+          h3.abel-txt What payment methods do you accept?
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna dolore magna aliqua. Ut enim ad minim veniam, aliqua. Ut enim ad minim veniam,  
+        li.fqa-q#unsure-dmg
+          h3.abel-txt How do I fill out the form if I don’t know what’s broken?
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+        li.fqa-q#no-model
+          h3.abel-txt Why can’t I find my model?
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna dolore magna aliqua. Ut enim ad minim veniam, aliqua. Ut enim adminim veniam, 
+        li.fqa-q#timing
+          h3.abel-txt How long does it take to get my replacement?
+          p Yes ipsum dolor sit amet, adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna dolore magna aliqua. Uim veniam, aliqua. Ut enim  adminim veniam, 
+        li.fqa-q#checkup
+          h3.abel-txt How do I check up on my order?
+          p Yes ipsum dolor sit amet, adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna dolore magna aliqua. Uim veniam, aliqua. Ut enim  adminim veniam, iusmod tempor       incididunt ut labore et 
+        li.fqa-q#cash
+          h3.abel-txt Can I exchange for cash instead?
+          p Yes ipsum dolor sit amet, adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna dolore magna aliqua. Uim veniam, aliqua. Ut sicing elit, sed do eiusmod tempor        incididunt ut labore et dolore magna dolore magna aliqua. Uim veniam, aliqua. enim  adminim veniam, 
+        li.fqa-q#delivery
+          h3.abel-txt Do I pay for delivery costs?
+          p Yes ipsum dolor sit amet, adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna dolore magna aliqua. Uim veniam, aliqua. Ut sicing elit, sed do eiusmod tempor        incididunt ut labore et dolore magna dolore magna aliqua. Uim veniam, aliqua. enim  adminim veniam, 
+        li.fqa-q#more
+          h3.abel-txt I have more questions.
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+
+      .fqa-qck-container
+        a(href="#value") Phone Valuation
+        a(href="#old-phone") Old Phone Processing
+        a(href="#quality") Product Quality
+        a(href="#cost") Cost of the Service
+        a(href="#payment") Payment Methods
+        a(href="#unsure-dmg") Unknown Damage
+        a(href="#no-model") No Model
+        a(href="#timing") Delivery Speed
+        a(href="#checkup") Order Checkup
+        a(href="#cash") Cash Exchange
+        a(href="#delivery") Delivery Costs
+        a(href="#more") Contact Info
+      

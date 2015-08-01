@@ -1,0 +1,179 @@
+//--------------------------
+//--------------------------
+//--------------------------
+
+// import modules
+@import "modules/modules.sass"
+
+//--------------------------
+//--------------------------
+//--------------------------
+
+// global variables //
+
+$pullupHeight: 40px
+
+// global styles //
+
+.nav-home 
+  // highlights current page
+  border-color: #2c4151
+
+.full-width
+  width: 100%
+
+.c-wrapper
+  width: 95%
+  max-width: 1100px
+
+.content-header
+  width: 80%
+  
+  margin: 0 auto .6em auto
+  padding-bottom: 0.3em
+
+  line-height: 115%
+
+  border-bottom: 1px solid #ddd
+
+.left, .right
+  width: 50%
+  height: 100%
+  text-align: center
+
+//--------------------------
+//--------------------------
+//--------------------------
+
+// intro block //
+
+.intro-wrapper
+  height: 100%
+
+.intro-content
+  display: flex
+  align-items: center
+
+  // to account for pullup height
+  height: calc(100% - #{$pullupHeight})
+
+  margin: 0 auto
+
+  > .left
+    height: auto
+
+    > .page-title
+      padding-bottom: .7em
+
+  > .right
+    height: auto
+
+    > .brkn-phn-img
+      max-width: 55%
+
+// end intro block //
+
+//--------------------------
+
+// blue bar block //
+
+.blue-bar
+  margin: 3em 0
+  background-color: #678ba9
+
+  > .blue-bar-container
+    display: flex
+    justify-content: space-around
+
+    width: 95%
+    max-width: 1300px
+
+    margin: 0 auto
+    padding: 5em 0
+
+    text-align: center
+  
+    > .blue-bar-content > img
+      display: block
+      margin: 0 auto
+      padding-top: 3em
+      position: relative
+      bottom: 0
+      height: 15vw
+      transition: bottom 0.2s ease-in-out
+      &:hover
+        bottom: 10px
+
+// end blue bar block //
+
+//--------------------------
+
+// exchange block //
+
+.exchange
+  display: flex
+  align-items: center
+
+  margin: 8em auto
+
+  > .left
+    width: 60%
+
+  > .right 
+    width: 40%
+    text-align: right
+
+    > img
+      max-width: 70%
+
+// end exchange block //
+
+//--------------------------
+
+// flowchart block //
+
+.flowchart
+  display: flex
+  align-items: center
+
+  margin: 8em auto
+
+  > .left 
+    width: 40%
+    text-align: left
+
+    > img
+      max-width: 80%
+
+  > .right 
+    width: 60%
+
+    > p
+      margin-bottom: 3.5em
+
+      &:last-of-type
+        margin-bottom: 0
+
+// end flowchart block //
+
+//--------------------------
+
+// orange bar //
+
+
+/* fourth */
+.orange-bar
+  background-color: #fbaf5d
+  text-align: center
+  padding: 5em 0
+  margin: 3em 0 5em 0
+
+  > h1
+    color: #fcfcfc
+    padding-bottom: .5em
+
+  > span
+    color: #fcfcfc
+
+    > a
+      font-size: inherit

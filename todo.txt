@@ -1,0 +1,4 @@
+Integrate front end
+Setup databases
+Accept orders
+integrate auto prefixer, & gzip
