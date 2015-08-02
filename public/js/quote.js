@@ -161,11 +161,12 @@ $(document).ready(function() {
       dataType: 'json',
       async: true,
       success: function(msg) {
-        console.log(msg)
-          // $('.current').next().html(msg.responseText);
-          // nextQuestion();
+          console.log(msg)
+          loadStore(msg);
+          nextQuestion();
       },
       error: function(msg) {
+        $('.err-txt').html("Oops, something went wrong.<br> Please try submitting again.")
         console.log(msg)
       }
     });
@@ -202,6 +203,8 @@ $(document).ready(function() {
         break;
 
     }
+
+    return;
 
   }
 
@@ -310,7 +313,7 @@ $(document).ready(function() {
       }
     }
 
-
+    return;
 
   }
 
@@ -318,7 +321,7 @@ $(document).ready(function() {
   function getOrderVal(clickedVal) {
 
     if (clickedVal.hasClass('selected')) {
-      return
+      return;
     }
 
     if (clickedVal.data("attr")) {
@@ -328,6 +331,8 @@ $(document).ready(function() {
         order.phone[clickedVal.data("attr")] = clickedVal.data("val");
       }
     }
+
+    return;
 
   }
 
@@ -351,7 +356,7 @@ $(document).ready(function() {
     if (resetType == "default") {
 
       if (clickedVal.hasClass('selected')) {
-        return
+        return;
       }
 
       clickedSibs.css("border-color", baseColor);
@@ -365,14 +370,14 @@ $(document).ready(function() {
       clickedVal.css("color", "#fff")
       clickedVal.addClass('selected')
 
-      return
+      return;
 
     }
 
     if (resetType == "borderOnly") {
 
       if (clickedVal.hasClass('selected')) {
-        return
+        return;
       }
 
       clickedSibs.css("border-color", baseColor);
@@ -383,7 +388,7 @@ $(document).ready(function() {
       clickedVal.css("border-style", "solid");
       clickedVal.addClass('selected');
 
-      return
+      return;
 
     }
 
@@ -410,6 +415,8 @@ $(document).ready(function() {
       }
 
     }
+
+    return;
 
   }
 
@@ -457,6 +464,8 @@ $(document).ready(function() {
 
     console.log(order)
 
+    return;
+
   }
 
   function nextQuestion(toGo) {
@@ -472,8 +481,21 @@ $(document).ready(function() {
 
     console.log(order)
 
+    return;
+
   }
 
+
+  function loadStore(order) {
+
+    $(".offer-price").html("$" + order.worth.toString())
+    $(".model-1-price").html("$" + order.productMinPrice[1])
+    $(".model-2-price").html("$" + order.productMinPrice[2])
+    $(".model-3-price").html("$" + order.productMinPrice[3])
+    $(".model-4-price").html("$" + order.productMinPrice[4])
+
+    return;
+  }
 
 
 })

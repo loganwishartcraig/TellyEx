@@ -1,4 +1,11 @@
-Integrate front end
-Setup databases
-Accept orders
+Review Frontend
+Tablet CSS
+Mobile CSS
+ie 8?
+
+Setup order database
+Setup payment processing
+Setup confirmation email
+Setup check order
+
 integrate auto prefixer, & gzip

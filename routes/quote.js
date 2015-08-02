@@ -7,8 +7,6 @@ var damageCostServ = require('../services/damageCost-service.js')
 
 function calcWorth(order, next) {
 
-  console.log("hit calcPrices");
-
   damageCostServ.findDamagePrice(order, function(err, worth) {
     if (err) return next(err);
 
@@ -19,7 +17,23 @@ function calcWorth(order, next) {
 
 }
 
-function clenseIssues(obj) {
+
+function getPhonePriceList(next) {
+
+  console.log("getting product prices...")
+
+  damageCostServ.findProductMinPrices(function(err, priceList) {
+    if (err) return next(err)
+
+    console.log(priceList);
+    next(null, priceList)
+  })
+
+}
+
+
+function cleanOrder(obj) {
+
 
   for (var key in obj) {
     if (obj.hasOwnProperty(key)) {
@@ -43,18 +57,23 @@ router.get('/', function(req, res, next) {
 
 router.post('/submit', function(req, res, next) {
 
-  console.log(req.body)
-
-  var issues = clenseIssues(req.body.issues);
+  var issues = cleanOrder(req.body.issues);
   var query = {phone: req.body.phone,
                issues: issues}
-  console.log(query)
 
   calcWorth(query, function(err, price){
     if (err) return res.send(400);
-    res.send({
-    worth: price
-    });
+
+    var priceList = getPhonePriceList(function(err, priceList) {
+      if (err) return res.send(400);
+
+      res.send({
+        worth: price,
+        productMinPrice: priceList
+      });
+    })
+
+    
   });
 
 
