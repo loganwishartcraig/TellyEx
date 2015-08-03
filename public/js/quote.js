@@ -1,34 +1,36 @@
 $(document).ready(function() {
 
-  var order = {
-    phone: {brand: 1},
-    issues: {}
-  }
-
   // var order = {
-  //   phone: {
-  //     capacity: 2,
-  //     carrier: 3,
-  //     color: 2,
-  //     model: 2,
-  //     brand: 1,
-  //   },
-  //   issues: {
-  //     batt: 0,
-  //     bkGlass: 1,
-  //     ftGlass: 0,
-  //     noBlth: 1,
-  //     hasSvc: 0,
-  //     hasWifi: 0,
-  //     hpJack: 1,
-  //     iCldLk: 1,
-  //     mic: 1,
-  //     opnd: 0,
-  //     pwr: 0,
-  //     wtrDmg: 1
-  //   }
-  // };
-  // setReview();
+  //   phone: {brand: 1},
+  //   issues: {}
+  // }
+
+  var order = {
+    phone: {
+      capacity: 2,
+      carrier: 3,
+      color: 2,
+      model: 2,
+      brand: 1,
+    },
+    issues: {
+      batt: 0,
+      bkGlass: 1,
+      ftGlass: 0,
+      noBlth: 1,
+      hasSvc: 0,
+      hasWifi: 0,
+      hpJack: 1,
+      iCldLk: 1,
+      mic: 1,
+      opnd: 0,
+      pwr: 0,
+      wtrDmg: 1
+    }
+  };
+  setReview();
+
+  var replacement = {};
 
   var hoverColor = "#f26ae9";
   var baseColor = "rgb(232, 232, 232)";
@@ -63,6 +65,15 @@ $(document).ready(function() {
     }
     $(this).css("border-style", "solid");
     $(this).css("border-color", baseColor);
+  })
+
+  $(".store-item").click(function() {
+
+    var model = $(this).data("val");
+
+    genProductPage(model);
+    nextQuestion();
+
   })
 
 
@@ -495,6 +506,13 @@ $(document).ready(function() {
     $(".model-4-price").html("$" + order.productMinPrice[4])
 
     return;
+  }
+
+
+  function genProductPage(toDisplay) {
+
+    return;
+
   }
 
 

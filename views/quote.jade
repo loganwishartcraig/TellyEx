@@ -20,7 +20,7 @@ block content
       h1 Right, Lets Get Started
 
     
-    .q-wrapper.middle-align.visited.current
+    .q-wrapper.middle-align
       h1 What Model Phone Do You Have?
       .q-options.q-lrg.q-model
         .model.border-only.form-optn(data-attr="model", data-val="1")
@@ -221,7 +221,7 @@ block content
       button.next Next
 
   
-    .q-wrapper.middle-align
+    .q-wrapper.middle-align.visited.current
       h1.review-header Review
       .review-container
         .left-review
@@ -247,20 +247,35 @@ block content
         h2 For Your Phone!
       .store-container
         .store-item-container
-          .store-item
+          .store-item.store-item-1(data-val="1")
+            h3 iPhone 5
+            img(src="images/iPhones/iPhone_5_black.png").store-img
             h3 From
             h3.model-1-price.model-price $XXX
-          .store-item
+          .store-item.store-item-2(data-val="2")
+            h3 iPhone 5s
+            img(src="images/iPhones/iPhone_5s_black.png").store-img
             h3 From
             h3.model-2-price.model-price $XXX
-          .store-item
+          .store-item.store-item-3(data-val="3")
+            h3 iPhone 6
+            img(src="images/iPhones/iPhone_6_black.png").store-img.store-img-6
             h3 From
             h3.model-3-price.model-price $XXX
-          .store-item
+          .store-item.store-item-4(data-val="4")
+            h3 iPhone 6+
+            img(src="images/iPhones/iPhone_6p_black.png").store-img.store-img-6p
             h3 From
             h3.model-4-price.model-price $XXX
+
         button.cash-offer-link I'd rather take cash...<br>
         button.back Back
+
+    .store-wrapper.middle-align
+      .product-container
+        img(src="images/iPhones/iPhone_6p_black.png")
+        h2 iPhone 5
+      button.back Back
 
   
     .q-wrapper.middle-align
