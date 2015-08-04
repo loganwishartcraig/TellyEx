@@ -15,269 +15,193 @@ block content
   include ./modules/nav.jade
 
 
-  .form-wrapper.parent-align
-    .intro-txt.middle-align
-      h1 Right, Lets Get Started
+  .form-wrapper
 
+    .form-content-wrapper
+      .form-content.absolute-center
+        h1 Right, Lets Get Started
+
+    .form-content-wrapper(data-section="1")
+      .form-content.absolute-center
+        h2.form-header What Model Phone Do You Have?
+        .owned-model-options
+          button.owned-model.form-optn.border-trans(data-attr="model", data-val="1")
+            img.owned-model-img(src="images/iPhones/iPhone_5_black.png")
+          button.owned-model.form-optn.border-trans(data-attr="model", data-val="2")
+            img.owned-model-img(src="images/iPhones/iPhone_5s_black.png")
+          button.owned-model.form-optn.border-trans(data-attr="model", data-val="3")
+            img.owned-model-img.six(src="images/iPhones/iPhone_6_black.png")
+          button.owned-model.form-optn.border-trans(data-attr="model", data-val="4")
+            img.owned-model-img.sixp(src="images/iPhones/iPhone_6p_black.png")
+        .owned-model-labels
+            span iPhone 5
+            span iPhone 5s
+            span iPhone 6
+            span iPhone 6+
     
-    .q-wrapper.middle-align
-      h1 What Model Phone Do You Have?
-      .q-options.q-lrg.q-model
-        .model.border-only.form-optn(data-attr="model", data-val="1")
-          img.model-img.abs-middle-algin(src="images/iPhones/iPhone_5_black.png")
-        .model.border-only.form-optn(data-attr="model", data-val="2")
-          img.model-img.abs-middle-algin(src="images/iPhones/iPhone_5s_black.png")
-        .model.border-only.form-optn(data-attr="model", data-val="3")
-          img.model-img.six.abs-middle-algin(src="images/iPhones/iPhone_6_black.png")
-        .model.border-only.form-optn(data-attr="model", data-val="4")
-          img.model-img.sixp.abs-middle-algin(src="images/iPhones/iPhone_6p_black.png")
-      .txt-container
-        span iPhone 5
-        span iPhone 5s
-        span iPhone 6
-        span iPhone 6+
-      
-
-    .q-wrapper.middle-align
-      h2 What Color?
-      .q-options.q-sml
-        span.quote-btn.form-optn(data-attr="color", data-val="1") Black/Grey
-        span.quote-btn.form-optn.silver-txt(data-attr="color", data-val="2") White/Silver
-        span.quote-btn.form-optn.gold-txt#col-gold(data-attr="color", data-val="3") Gold
-      button.back Back
-    
-
-
-  
-    .q-wrapper.middle-align
-      h2 What Storeage Capacity?
-      .q-options.q-sml
-        span.quote-btn.form-optn(data-attr="capacity", data-val="1") 16GB
-        span.quote-btn.form-optn#cap-32(data-attr="capacity", data-val="2") 32GB
-        span.quote-btn.form-optn(data-attr="capacity", data-val="3") 64GB
-        span.quote-btn.form-optn#cap-128(data-attr="capacity", data-val="4") 128GB
-      button.back Back
-    
-
-  
-    .q-wrapper.middle-align
-      h2 What Carrier?
-      .carrier-col.quote-col-lrg.q-options
-        .carrier-btn.quote-btn.border-only.form-optn(data-attr="carrier", data-val="1")
-          img.carrier-img.verizon-img(src="images/Verizon_logo.svg")
-          span Verizon
-        .carrier-btn.quote-btn.border-only.form-optn(data-attr="carrier", data-val="2")
-          img.carrier-img(src="images/AT&T-logo.svg")
-          span AT&amp;T
-        .carrier-btn.quote-btn.border-only.form-optn(data-attr="carrier", data-val="3")
-          img.carrier-img(src="images/sprint-logo.svg")
-          span Sprint
-        .carrier-btn.quote-btn.border-only.form-optn(data-attr="carrier", data-val="4")
-          img.carrier-img(src="images/tmobile-logo.svg")
-          span T-Mobile
-        .carrier-btn.quote-btn.border-only.form-optn(data-attr="carrier", data-val="100")
-          img.carrier-img(src="images/unlocked.svg")
-          span Unlocked
-        .carrier-btn.quote-btn.border-only.form-optn(data-attr="carrier", data-val="300")
-          img.carrier-img(src="images/other.svg")
-          span Other
-        .carrier-btn.quote-btn.border-only.form-optn(data-attr="carrier", data-val="900") 
-          img.carrier-img(src="images/unknown.svg")
-          span Unsure
-      button.back Back
-    
-
-  
-    .q-wrapper.middle-align
-      h2 Can The Phone...
-      .ans-container
-        .quote-col-sml
-          h3 Turn On?
-          .q-options
-            span.ans-btn.ans-1.form-optn.issue.yes-btn(data-attr="pwr", data-val="0") Yes
-            span.ans-btn.ans-1.form-optn.issue.no-btn(data-attr="pwr", data-val="1") No
-        .quote-col-sml
-          h3 Restore With iTunes?
-          .q-options
-            span.ans-btn.ans-1.form-optn.issue.yes-btn(data-attr="canRestr", data-val="0") Yes
-            span.ans-btn.ans-1.form-optn.issue.no-btn(data-attr="canRestr", data-val="1") No
-            span.ans-btn.ans-1.form-optn.issue.idk-btn(data-attr="canRestr", data-val="2") I Don't Know
-      button.back Back
-
-  
-    .q-wrapper.middle-align
-      h2 What About...
-      .ans-container
-        .quote-col-sml
-          h3 Connect To WiFi Networks?
-          .q-options
-            span.ans-btn.ans-2.form-optn.issue.yes-btn(data-attr="noWifi", data-val="0") Yes
-            span.ans-btn.ans-2.form-optn.issue.no-btn(data-attr="noWifi", data-val="1") No
-            span.ans-btn.ans-2.form-optn.issue.idk-btn(data-attr="noWifi", data-val="2") I Don't Know
-        .quote-col-sml
-          h3 Connect To Bluetooth Devices?
-          .q-options
-            span.ans-btn.ans-2.form-optn.issue.yes-btn(data-attr="noBlth", data-val="0") Yes
-            span.ans-btn.ans-2.form-optn.issue.no-btn(data-attr="noBlth", data-val="1") No
-            span.ans-btn.ans-2.form-optn.issue.idk-btn(data-attr="noBlth", data-val="2") I Don't Know    
-      button.back Back  
-
-  
-    .q-wrapper.middle-align
-      h2 Does The Phone Have...
-      .ans-container-med
-        .quote-col-ex-sml
-          h3 Water Damage?
-          .q-options
-            span.ans-btn.ans-3.form-optn.issue.yes-btn(data-attr="wtrDmg", data-val="1") Yes
-            span.ans-btn.ans-3.form-optn.issue.no-btn(data-attr="wtrDmg", data-val="0") No
-            span.ans-btn.ans-3.form-optn.issue.idk-btn(data-attr="wtrDmg", data-val="2") I Don't Know
-        .quote-col-ex-sml
-          h3 Cell Service?
-          .q-options
-            span.ans-btn.ans-3.form-optn.issue.yes-btn(data-attr="hasSvc", data-val="0") Yes
-            span.ans-btn.ans-3.form-optn.issue.no-btn(data-attr="hasSvc", data-val="1") No
-            span.ans-btn.ans-3.form-optn.issue.idk-btn(data-attr="hasSvc", data-val="2") I Don't Know
-        .quote-col-ex-sml
-          h3 iCloud Lock?
-          .q-options
-            span.ans-btn.ans-3.last-ans.form-optn.issue.yes-btn(data-attr="iCldLk", data-val="1") Yes
-            span.ans-btn.ans-3.last-ans.form-optn.issue.no-btn(data-attr="iCldLk", data-val="0") No
-            span.ans-btn.ans-3.last-ans.form-optn.issue.idk-btn(data-attr="iCldLk", data-val="2") I Don't Know
-      button.back Back      
-
-
-  
-    .q-wrapper.middle-align#esn
-      h2 Is The Phone Blocked From Your Network Provider?
-      .q-options.q-sml
-        span.quote-btn.form-optn.issue.yes-btn(data-attr="clnESN", data-val="1") Yes
-        span.quote-btn.form-optn.issue.no-btn(data-attr="clnESN", data-val="0") No
-        span.quote-btn.form-optn.issue.idk-btn(data-attr="clnESN", data-val="2") I Don't Know
-      button.back(data-attr="clnESN") Back
-    
-
-  
-  
- 
-    .q-wrapper.middle-align#opnd
-      h2 Has The Phone Been Opened Or Repaired Before?
-      .q-options.q-sml
-        span.quote-btn.form-optn.issue.yes-btn(data-attr="opnd", data-val="1") Yes
-        span.quote-btn.form-optn.issue.no-btn(data-attr="opnd", data-val="0") No
-        span.quote-btn.form-optn.issue.idk-btn(data-attr="opnd", data-val="2") I Don't Know
-      button.back Back
-    
-
-
-  
-    .q-wrapper.middle-align
-      h2 How Are The Cosmetics?
-      .ans-container-med
-        .quote-col-ex-sml
-          h3 Front Glass/LCD 
-          .q-options
-            span.ans-btn.ans-4.form-optn.issue.yes-btn(data-attr="ftGlass", data-val="0") Okay
-            span.ans-btn.ans-4.form-optn.issue.no-btn(data-attr="ftGlass", data-val="1") Broken
-        .quote-col-ex-sml
-          h3 Back Glass 
-          .q-options
-            span.ans-btn.ans-4.form-optn.issue.yes-btn(data-attr="bkGlass", data-val="0") Okay
-            span.ans-btn.ans-4.form-optn.issue.no-btn(data-attr="bkGlass", data-val="1") Broken
-        .quote-col-ex-sml
-          h3 Battery Life
-          .q-options 
-            span.ans-btn.ans-4.form-optn.issue.yes-btn(data-attr="batt", data-val="0") Okay
-            span.ans-btn.ans-4.form-optn.issue.no-btn(data-attr="batt", data-val="1") Poor
-      button.back Back      
-
-
-  
-    .q-wrapper.middle-align
-      h2 Is Aything Else Damaged?
-      .dmg-container
-        .dmg-item
-          label Buttons
-          span.dmg-btn.form-optn.issue.no-reset(data-attr="lkBtn", data-val="1") Lock Button
-          span.dmg-btn.form-optn.issue.no-reset(data-attr="hmBtn", data-val="1") Home Button
-          span.dmg-btn.form-optn.issue.no-reset(data-attr="volBtn", data-val="1") Volume Button
-          span.dmg-btn.form-optn.issue.no-reset(data-attr="vbrSwch", data-val="1") Vibrate Switch
-        .dmg-item
-          label Ports
-          span.dmg-btn.form-optn.issue.no-reset(data-attr="chrgr", data-val="1") Charging Port
-          span.dmg-btn.form-optn.issue.no-reset(data-attr="hpJack", data-val="1") Headphone Jack
-        .dmg-item
-          label Audio
-          span.dmg-btn.form-optn.issue.no-reset(data-attr="spkr", data-val="1") Loud Speaker
-          span.dmg-btn.form-optn.issue.no-reset(data-attr="earSpkr", data-val="1") Ear Speaker
-          span.dmg-btn.form-optn.issue.no-reset(data-attr="mic", data-val="1") Microphone
-        .dmg-item
-          label Cameras
-          span.dmg-btn.form-optn.issue.no-reset(data-attr="bkCmra", data-val="1") Rear Camera
-          span.dmg-btn.form-optn.issue.no-reset(data-attr="ftCmra", data-val="1") Front Camera
-
-
-      button.back Back
-      button.next Next
-
-  
-    .q-wrapper.middle-align.visited.current
-      h1.review-header Review
-      .review-container
-        .left-review
-          .detail-block
-            ul.review-desc
-              li.review-model
-              li.review-color
-              li.review-capacity
-              li.review-carrier
-          span.err-txt
-        .right-review
-          h3 Your phone has<br>the following issues:
-          ul.review-block
-          button.back Back
-          button.submit Correct
-
-
-    .store-wrapper.middle-align
-      h1 Pick A New Phone
-      .offer-container
-        h2 We'll Give You
-        span.offer-price $XXX
-        h2 For Your Phone!
-      .store-container
-        .store-item-container
-          .store-item.store-item-1(data-val="1")
-            h3 iPhone 5
-            img(src="images/iPhones/iPhone_5_black.png").store-img
-            h3 From
-            h3.model-1-price.model-price $XXX
-          .store-item.store-item-2(data-val="2")
-            h3 iPhone 5s
-            img(src="images/iPhones/iPhone_5s_black.png").store-img
-            h3 From
-            h3.model-2-price.model-price $XXX
-          .store-item.store-item-3(data-val="3")
-            h3 iPhone 6
-            img(src="images/iPhones/iPhone_6_black.png").store-img.store-img-6
-            h3 From
-            h3.model-3-price.model-price $XXX
-          .store-item.store-item-4(data-val="4")
-            h3 iPhone 6+
-            img(src="images/iPhones/iPhone_6p_black.png").store-img.store-img-6p
-            h3 From
-            h3.model-4-price.model-price $XXX
-
-        button.cash-offer-link I'd rather take cash...<br>
+    .form-content-wrapper(data-section="2")
+      .form-content.absolute-center
+        h2.form-header What Color?
+        .col-options
+          button.form-optn.bg-trans(data-attr="color", data-val="1") Black/Grey
+          button.form-optn.bg-trans.silver-txt(data-attr="color", data-val="2") White/Silver
+          button.form-optn.bg-trans.gold-txt#col-gold(data-attr="color", data-val="3") Gold
         button.back Back
 
-    .store-wrapper.middle-align
-      .product-container
-        img(src="images/iPhones/iPhone_6p_black.png")
-        h2 iPhone 5
-      button.back Back
+    .form-content-wrapper(data-section="3")
+      .form-content.absolute-center
+        h2.form-header What Storeage Capacity?
+        .col-options
+          button.form-optn.bg-trans#cap-16(data-attr="capacity", data-val="1") 16GB
+          button.form-optn.bg-trans#cap-32(data-attr="capacity", data-val="2") 32GB
+          button.form-optn.bg-trans#cap-64(data-attr="capacity", data-val="3") 64GB
+          button.form-optn.bg-trans#cap-128(data-attr="capacity", data-val="4") 128GB
+        button.back Back
 
-  
-    .q-wrapper.middle-align
-      h1 END
-      button.back Back
+    .form-content-wrapper(data-section="4")
+      .form-content.absolute-center
+        h2.form-header What Carrier?
+        .owned-carrier-options
+          button.form-optn.border-trans(data-attr="carrier", data-val="1")
+            img.owned-carrier-img.verizon-img(src="images/Verizon_logo.svg")
+          button.form-optn.border-trans(data-attr="carrier", data-val="2")
+            img.owned-carrier-img(src="images/AT&T-logo.svg")
+          button.form-optn.border-trans(data-attr="carrier", data-val="3")
+            img.owned-carrier-img(src="images/sprint-logo.svg")
+          button.form-optn.border-trans(data-attr="carrier", data-val="4")
+            img.owned-carrier-img(src="images/tmobile-logo.svg")
+          button.form-optn.border-trans(data-attr="carrier", data-val="100")
+            img.owned-carrier-img(src="images/unlocked.svg")
+          button.form-optn.border-trans(data-attr="carrier", data-val="300")
+            img.owned-carrier-img(src="images/other.svg")
+          button.form-optn.border-trans(data-attr="carrier", data-val="900") 
+            img.owned-carrier-img(src="images/unknown.svg")
+        .owned-model-labels
+          span Verizon
+          span AT&T
+          span Sprint
+          span T-Mobile
+          span Unlocked
+          span Other
+          span Unsure
+        button.back Back
+
+
+    .form-content-wrapper(data-section="5", data-validation="2")
+      .form-content.absolute-center
+        h2.form-header Can The Phone...
+        .two-col-options
+          .col-options
+            h3 Q1
+            button.form-optn.bg-trans.yes-btn(data-attr="pwr", data-val="0") Yes
+            button.form-optn.bg-trans.no-btn(data-attr="pwr", data-val="1") No
+          .col-options
+            h3 Q2
+            button.form-optn.bg-trans.yes-btn(data-attr="canRestr", data-val="0") Yes
+            button.form-optn.bg-trans.no-btn(data-attr="canRestr", data-val="1") No
+            button.form-optn.bg-trans.idk-btn(data-attr="canRestr", data-val="2") I Don't Know
+        button.back Back
+
+
+    .form-content-wrapper(data-section="6", data-validation="2")
+      .form-content.absolute-center
+        h2.form-header What About...
+        .two-col-options
+          .col-options
+            h3 Q1
+            button.form-optn.bg-trans.yes-btn(data-attr="noWifi", data-val="0") Yes
+            button.form-optn.bg-trans.no-btn(data-attr="noWifi", data-val="1") No
+            button.form-optn.bg-trans.idk-btn(data-attr="noWifi", data-val="2") I Don't Know
+          .col-options
+            h3 Q2
+            button.form-optn.bg-trans.yes-btn(data-attr="noBlth", data-val="0") Yes
+            button.form-optn.bg-trans.no-btn(data-attr="noBlth", data-val="1") No
+            button.form-optn.bg-trans.idk-btn(data-attr="noBlth", data-val="2") I Don't Know
+        button.back Back
+
+
+    .form-content-wrapper(data-section="7", data-validation="3")
+      .form-content.absolute-center
+        h2.form-header Does The Phone Have...
+        .three-col-options
+          .col-options
+            h3 Q1
+            button.form-optn.bg-trans.yes-btn(data-attr="wtrDmg", data-val="1") Yes
+            button.form-optn.bg-trans.no-btn(data-attr="wtrDmg", data-val="0") No
+            button.form-optn.bg-trans.idk-btn(data-attr="wtrDmg", data-val="2") I Don't Know
+          .col-options
+            h3 Q2
+            button.form-optn.bg-trans.yes-btn(data-attr="hasSvc", data-val="0") Yes
+            button.form-optn.bg-trans.no-btn(data-attr="hasSvc", data-val="1") No
+            button.form-optn.bg-trans.idk-btn(data-attr="hasSvc", data-val="2") I Don't Know
+          .col-options
+            h3 Q2
+            button.form-optn.bg-trans.yes-btn(data-attr="iCldLk", data-val="1") Yes
+            button.form-optn.bg-trans.no-btn(data-attr="iCldLk", data-val="0") No
+            button.form-optn.bg-trans.idk-btn(data-attr="iCldLk", data-val="2") I Don't Know
+        button.back Back
+
+
+    .form-content-wrapper(data-section="8")
+      .form-content.absolute-center
+        h2.form-header Is The Phone Blocked From Your Network Provider?
+        .col-options
+          button.form-optn.bg-trans.yes-btn(data-attr="clnESN", data-val="1") Yes
+          button.form-optn.bg-trans.no-btn(data-attr="clnESN", data-val="0") No
+          button.form-optn.bg-trans.idk-btn(data-attr="clnESN", data-val="2") I Don't Know
+        button.back Back
+
+
+    .form-content-wrapper(data-section="9")
+      .form-content.absolute-center
+        h2.form-header Has The Phone Been Opened Or Repaired Before?
+        .col-options
+          button.form-optn.bg-trans.yes-btn(data-attr="opnd", data-val="1") Yes
+          button.form-optn.bg-trans.no-btn(data-attr="opnd", data-val="0") No
+          button.form-optn.bg-trans.idk-btn(data-attr="opnd", data-val="2") I Don't Know
+        button.back Back
+
+
+    .form-content-wrapper(data-section="10", data-validation="3")
+      .form-content.absolute-center
+        h2.form-header How Are The Cosmetics?
+        .three-col-options
+          .col-options
+            h3 Q1
+            button.form-optn.bg-trans.yes-btn(data-attr="ftGlass", data-val="0") Okay
+            button.form-optn.bg-trans.no-btn(data-attr="ftGlass", data-val="1") Broken
+          .col-options
+            h3 Q2
+            button.form-optn.bg-trans.yes-btn(data-attr="bkGlass", data-val="0") Okay
+            button.form-optn.bg-trans.no-btn(data-attr="bkGlass", data-val="1") Broken
+          .col-options
+            h3 Q2
+            button.form-optn.bg-trans.yes-btn(data-attr="batt", data-val="0") Okay
+            button.form-optn.bg-trans.no-btn(data-attr="batt", data-val="1") Poor
+        button.back Back
+
+
+    .form-content-wrapper(data-section="11", data-validation="3")
+      .form-content.absolute-center
+        h2.form-header How Are The Cosmetics?
+        .four-col-options
+          .col-options
+            h3 Q1
+            button.form-optn.bg-trans.no-reset.issue-btn(data-attr="lkBtn", data-val="1") Lock Button
+            button.form-optn.bg-trans.no-reset.issue-btn(data-attr="hmBtn", data-val="1") Home Button
+            button.form-optn.bg-trans.no-reset.issue-btn(data-attr="volBtn", data-val="1") Volume Button
+            button.form-optn.bg-trans.no-reset.issue-btn(data-attr="vbrSwch", data-val="1") Vibrate Switch
+          .col-options
+            h3 Q1
+            button.form-optn.bg-trans.no-reset.issue-btn(data-attr="chrgr", data-val="1") Charging Port
+            button.form-optn.bg-trans.no-reset.issue-btn(data-attr="hpJack", data-val="1") Headphone Jack
+          .col-options
+            h3 Q1
+            button.form-optn.bg-trans.no-reset.issue-btn(data-attr="spkr", data-val="1") Loud Speaker
+            button.form-optn.bg-trans.no-reset.issue-btn(data-attr="earSpkr", data-val="1") Ear Speaker
+            button.form-optn.bg-trans.no-reset.issue-btn(data-attr="mic", data-val="1") Microphone
+          .col-options
+            h3 Q1
+            button.form-optn.bg-trans.no-reset.issue-btn(data-attr="bkCmra", data-val="1") Rear Camera
+            button.form-optn.bg-trans.no-reset.issue-btn(data-attr="ftCmra", data-val="1") Front Camera
+        button.back Back
