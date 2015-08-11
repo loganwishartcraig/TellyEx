@@ -5,30 +5,39 @@ var GLOBAL_MODELS = [1, 2, 3, 4];
 exports.findDamagePrice = function(obj, next) {
 
   var minPriceList = {
-    1: 50,
-    2: 70,
-    3: 100,
-    4: 120
+    1: 30,
+    2: 50,
+    3: 85,
+    4: 100
   }
 
+  console.log(obj.phone)
 
   console.log("trying to find phones worth...")
 
-  damageCosts.findOne({
-      Brand: obj.phone.brand,
-      Model: obj.phone.model,
-      Capacity: obj.phone.capacity,
-      Carrier: obj.phone.carrier
-    },
-    function(err, record) {
-      if (err) return next(err);
+  var searchString = "Phone.Brand"
 
-      var worth = record.PriceUsed;
+  damageCosts.find({"Phone.Brand": 1}).
+    where("Phone.Model").equals(obj.phone.model).
+    where("Phone.Capacity").equals(obj.phone.capacity).
+    where("Phone.Carrier").equals(obj.phone.carrier).
+    exec(function(err, record) {
+      console.log("executed")
+      console.log(record[0])
+      var worth = record[0].Phone.PriceUsed;
 
       for (var key in obj.issues) {
         if (obj.issues.hasOwnProperty(key)) {
 
-          worth -= record.Issues[key];
+          worth -= record[0].Issues[key];
+
+        }
+      }
+
+      for (var key in obj.components) {
+        if (obj.issues.hasOwnProperty(key)) {
+
+          worth -= record[0].Components[key];
 
         }
       }
@@ -38,40 +47,38 @@ exports.findDamagePrice = function(obj, next) {
       }
 
       return next(null, worth);
-    })
+
+    })  
 
 }
 
 
 exports.findProductMinPrices = function(next) {
 
-  var modelList = GLOBAL_MODELS;
+  var modelList = [1, 2, 3, 4];
   var priceList = {};
 
   for (var i = 0; i < modelList.length; i++) {
-    damageCosts.find({
-        Brand: 1,
-        Model: modelList[i]
-      },
-      'Model PriceNew',
-      function(err, result) {
+    damageCosts.find({"Phone.Brand" :1}).
+      where("Phone.Model").equals(modelList[i]).
+      exec(function(err, record) {
         if (err) return next(err)
 
         var minPrice = 0;
 
-        for (var j = 0; j < result.length; j++) {
-          if (j === 0) minPrice = result[j].PriceNew
+        for (var j = 0; j < record.length; j++) {
+          if (j === 0) minPrice = record[j].Phone.PriceNew
 
-          if (result[j].PriceNew < minPrice) minPrice = result[j].PriceNew
+          if (record[j].Phone.PriceNew < minPrice) minPrice = record[j].Phone.PriceNew
         }
 
-        priceList[result[0].Model] = minPrice;
+        priceList[record[0].Phone.Model] = minPrice;
 
         if (i === Object.keys(priceList).length) {
           return next(null, priceList)
         }
 
-      })
+    })
   }
   
 }

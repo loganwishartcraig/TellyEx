@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  $(".review-content-wrapper").hide();
+  $(".store-content-wrapper").hide();
 
   // Global Vars
 
@@ -9,7 +11,15 @@ $(document).ready(function() {
 
   var lastScrollTop = 0;
 
-  var damagedPhone = {};
+  var phone = {
+  
+  };
+
+  var damagedModel = {
+    phone: {brand: 1},
+    issues: {},
+    components: {}
+  };
 
   // Set Up Page
 
@@ -121,9 +131,9 @@ $(document).ready(function() {
       swapBgTextColor(node)
     }
 
-    node.css("border-color", baseBorderColor);
     node.removeClass('selected');
-    delete damagedPhone[node.data("attr")];
+    node.css("border-color", baseBorderColor);
+
 
   }
 
@@ -136,9 +146,9 @@ $(document).ready(function() {
     if (node.hasClass('border-trans')) {
 
       if (node.hasClass('no-reset')) {
-        node.addClass('selected');
-        damagedPhone[node.data("attr")] = node.data("val");
         return;
+
+
       }
 
       node.siblings('.selected').each(function(i, j) {
@@ -146,18 +156,15 @@ $(document).ready(function() {
       })
 
       node.css("border-color", selectedBorderColor)
-      node.addClass('selected');
       return;
     }
 
 
     if (node.hasClass('bg-trans')) {
-      
+
       swapBgTextColor(node)
 
       if (node.hasClass('no-reset')) {
-        node.addClass('selected');
-        damagedPhone[node.data("attr")] = node.data("val");
         return;
       }
 
@@ -165,7 +172,6 @@ $(document).ready(function() {
         unmarkSelection($(j));
       })
 
-      node.addClass('selected');
       return;
     }
 
@@ -194,13 +200,19 @@ $(document).ready(function() {
     }
   })
 
+  function setDmgData(model, attr, val) {
+
+    damagedModel[model][attr] = val;
+
+    return;
+
+  }
 
 
   // Grab data from form option & goto next question
 
   $(".form-optn").click(function() {
 
-    console.log(damagedPhone)
 
     var requiredSelections = parseInt($(this).parents(".form-content-wrapper").data("validation"));
     var nextSection = parseInt($(this).parents(".form-content-wrapper").data("section")) + 1;
@@ -208,27 +220,30 @@ $(document).ready(function() {
     if ($(this).hasClass('selected')) {
 
       unmarkSelection($(this));
-
-
-
+      $(this).removeClass('selected')
+      
     } else {
-
+      var model = $(this).data("model")
+      var attr = $(this).data("attr")
+      var val = $(this).data("val")
+      
       markSelection($(this));
+      setDmgData(model, attr, val);
 
-
-
+      $(this).addClass('selected');
+      
     }
 
     if (requiredSelections) {
       var selected = $(this).parents(".form-content-wrapper").find(".selected").length;
       if (selected === requiredSelections) {
-        return //gotoQuestion(nextSection);
+        return gotoQuestion(nextSection);
       } else {
         return;
       }
     }
 
-    return //gotoQuestion(nextSection);
+    return gotoQuestion(nextSection);
   })
 
 
@@ -246,6 +261,132 @@ $(document).ready(function() {
     return gotoQuestion(nextSection);
 
   })
+
+  function validateData(dmgOrder) {
+    return true;
+  }
+
+
+  $(".submit").click(function() {
+
+    console.log(damagedModel);
+
+    var valid = validateData(damagedModel);
+
+    if (valid) {
+      $.ajax({
+        url: '/quote/submit',
+        type: 'POST',
+        data: JSON.stringify(damagedModel),
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        async: true,
+        success: function(msg) {
+          setStore(msg.worth, msg.productMinPrice)
+        },
+        error: function(msg) {
+          console.log(msg)
+        }
+      });
+    }
+
+  })
+
+
+
+  function setReview() {
+
+    var staticInfo = {
+
+      model: {
+        1: {
+          name: "iPhone 5",
+          img: {
+            1: "iPhone_5_black.png",
+            2: "iPhone_5_white.png"
+          }
+        },
+        2: {
+          name: "iPhone 5s",
+          img: {
+            1: "iPhone_5s_black.png",
+            2: "iPhone_5s_white.png",
+            3: "iPhone_5s_gold.png"
+          }
+        },
+        3: {
+          name: "iPhone 6",
+          img: {
+            1: "iPhone_6_black.png",
+            2: "iPhone_6_white.png",
+            3: "iPhone_6_gold.png"
+          }
+        },
+        4: {
+          name: "iPhone 6+",
+          img: {
+            1: "iPhone_6p_black.png",
+            2: "iPhone_6p_white.png",
+            3: "iPhone_6p_gold.png"
+          }
+        }
+      },
+      color: {
+        1: "Black",
+        2: "White",
+        3: "Gold"
+      },
+      capacity: {
+        1: "16GB",
+        2: "32GB",
+        3: "64GB",
+        4: "128GB"
+      },
+      carrier: {
+        1: "Verizon",
+        2: "AT&T",
+        3: "Sprint",
+        4: "T-Mobile",
+        100: "Unlocked",
+        300: "Other",
+        900: "Unknown"
+      }
+    }
+
+    var dmgInfo = {
+      pwr: "Does Not Turn On",
+      canRestr: "Can't Restore With iTunes",
+      noWifi: "Doesn't Have Wi-Fi Connectivity",
+      noBlth: "Doesn't Have Bluetooth Connectivity",
+      wtrDmg: "Has Water Damage",
+      hasSvc: "Doesn't Get Network Service",
+      iCldLk: "Has An Active iCloud Lock",
+      clnESN: "Is Blocked From Your Carrier",
+      opnd: "Has Been Opened Before",
+      ftGlass: "Has Cracked Front Glass/LCD",
+      bkGlass: "Has Cracked Back Glass",
+      batt: "Has Poor Battery Life",
+      lkBtn: "Has A Broken Lock Button",
+      hmBtn: "Has A Broken Home Button",
+      volBtn: "Has A Broken Volume Button",
+      vbrSwch: "Has A Broken Vibrate Switch",
+      chrgr: "Has A Broken Charging Port",
+      hpJack: "Has A Broken Headphone Jack",
+      spkr: "Has A Broken Bottom Speaker",
+      earSpkr: "Has A Broken Ear Speaker",
+      mic: "Has A Broken Microphone",
+      bkCmra: "Has A Broken Back Camera",
+      ftCmra: "Has A Broken Front Camera"
+    }
+  }
+
+  function setStore(worth, priceList) {
+
+    $(".owned-price-container").html("$" + worth.toString());
+
+    return $(".store-content-wrapper").slideDown(200)
+
+  }
 
 
 })

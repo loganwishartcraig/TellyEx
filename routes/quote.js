@@ -57,9 +57,9 @@ router.get('/', function(req, res, next) {
 
 router.post('/submit', function(req, res, next) {
 
-  var issues = cleanOrder(req.body.issues);
   var query = {phone: req.body.phone,
-               issues: issues}
+               issues: req.body.issues,
+               components: req.body.components}
 
   calcWorth(query, function(err, price){
     if (err) return res.send(400);

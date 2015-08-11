@@ -2,12 +2,14 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var damageSchema = new Schema({
-  Brand: Number,
-  Model: Number,
-  Capacity: Number,
-  Carrier: Number,
-  PriceNew: Number,
-  PriceUsed: Number,
+  Phone: {
+    Brand: Number,
+    Model: Number,
+    Capacity: Number,
+    Carrier: Number,
+    PriceNew: Number,
+    PriceUsed: Number,
+  },
   Issues: {
     pwr: Number,
     wtrDmg: Number,
@@ -19,9 +21,11 @@ var damageSchema = new Schema({
     noBlth: Number,
     prwLoop: Number,
     noAudio: Number,
-    opnd: Number,
+    opnd: Number
+  },
+  Components: {
     ftGlass: Number,
-    bkGlass: Number,
+    housing: Number,
     volBtn: Number,
     lkBtn: Number,
     hmBtn: Number,
@@ -40,16 +44,18 @@ var damageSchema = new Schema({
 var damageCost = mongoose.model('DamageCost', damageSchema);
 
 function ENTER_ITEMS(item, next) {
-  
+
   console.log("entering item...")
 
   var newPrice = new damageCost({
-    Brand: item.brand,
-    Model: item.model,
-    Capacity: item.capacity,
-    Carrier: item.carrier,
-    PriceNew: item.usedPrice,
-    PriceUsed: item.newPrice,
+    Phone: {
+      Brand: item.brand,
+      Model: item.model,
+      Capacity: item.capacity,
+      Carrier: item.carrier,
+      PriceNew: item.usedPrice,
+      PriceUsed: item.newPrice,
+    },
     Issues: {
       pwr: item.pwr,
       wtrDmg: item.wtrDmg,
@@ -61,9 +67,11 @@ function ENTER_ITEMS(item, next) {
       noBlth: item.noBlth,
       prwLoop: item.prwLoop,
       noAudio: item.noAudio,
-      opnd: item.opnd,
+      opnd: item.opnd
+    },
+    Components: {
       ftGlass: item.ftGlass,
-      bkGlass: item.bkGlass,
+      housing: item.housing,
       volBtn: item.volBtn,
       lkBtn: item.lkBtn,
       hmBtn: item.hmBtn,
@@ -75,7 +83,7 @@ function ENTER_ITEMS(item, next) {
       hpJack: item.hpJack,
       mic: item.mic,
       chrgr: item.chrgr,
-      batt: item.batt,
+      batt: item.batt
     }
   })
 
@@ -91,7 +99,6 @@ function ENTER_ITEMS(item, next) {
 }
 
 
-
 // for (var i in BASE_PRICES) {
 //   ENTER_ITEMS(BASE_PRICES[i], function(err, res) {
 //     if (err) return console.error(err);
@@ -102,7 +109,10 @@ function ENTER_ITEMS(item, next) {
 
 
 
+
 var damageCost = mongoose.model('DamageCost', damageSchema);
 
 
-module.exports = {damageCost: damageCost}
+module.exports = {
+  damageCost: damageCost
+}

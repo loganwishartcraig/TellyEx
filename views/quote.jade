@@ -25,13 +25,13 @@ block content
       .form-content.absolute-center
         h2.form-header What Model Phone Do You Have?
         .owned-model-options
-          button.owned-model.form-optn.border-trans(data-attr="model", data-val="1")
+          button.owned-model.form-optn.border-trans(data-model="phone", data-attr="model", data-val="1")
             img.owned-model-img(src="images/iPhones/iPhone_5_black.png")
-          button.owned-model.form-optn.border-trans(data-attr="model", data-val="2")
+          button.owned-model.form-optn.border-trans(data-model="phone", data-attr="model", data-val="2")
             img.owned-model-img(src="images/iPhones/iPhone_5s_black.png")
-          button.owned-model.form-optn.border-trans(data-attr="model", data-val="3")
+          button.owned-model.form-optn.border-trans(data-model="phone", data-attr="model", data-val="3")
             img.owned-model-img.six(src="images/iPhones/iPhone_6_black.png")
-          button.owned-model.form-optn.border-trans(data-attr="model", data-val="4")
+          button.owned-model.form-optn.border-trans(data-model="phone", data-attr="model", data-val="4")
             img.owned-model-img.sixp(src="images/iPhones/iPhone_6p_black.png")
         .owned-model-labels
             span iPhone 5
@@ -43,38 +43,38 @@ block content
       .form-content.absolute-center
         h2.form-header What Color?
         .col-options
-          button.form-optn.bg-trans(data-attr="color", data-val="1") Black/Grey
-          button.form-optn.bg-trans.silver-txt(data-attr="color", data-val="2") White/Silver
-          button.form-optn.bg-trans.gold-txt#col-gold(data-attr="color", data-val="3") Gold
+          button.form-optn.bg-trans(data-model="phone", data-attr="color", data-val="1") Black/Grey
+          button.form-optn.bg-trans.silver-txt(data-model="phone", data-attr="color", data-val="2") White/Silver
+          button.form-optn.bg-trans.gold-txt#col-gold(data-model="phone", data-attr="color", data-val="3") Gold
         button.back Back
 
     .form-content-wrapper(data-section="3")
       .form-content.absolute-center
         h2.form-header What Storeage Capacity?
         .col-options
-          button.form-optn.bg-trans#cap-16(data-attr="capacity", data-val="1") 16GB
-          button.form-optn.bg-trans#cap-32(data-attr="capacity", data-val="2") 32GB
-          button.form-optn.bg-trans#cap-64(data-attr="capacity", data-val="3") 64GB
-          button.form-optn.bg-trans#cap-128(data-attr="capacity", data-val="4") 128GB
+          button.form-optn.bg-trans#cap-16(data-model="phone", data-attr="capacity", data-val="1") 16GB
+          button.form-optn.bg-trans#cap-32(data-model="phone", data-attr="capacity", data-val="2") 32GB
+          button.form-optn.bg-trans#cap-64(data-model="phone", data-attr="capacity", data-val="3") 64GB
+          button.form-optn.bg-trans#cap-128(data-model="phone", data-attr="capacity", data-val="4") 128GB
         button.back Back
 
     .form-content-wrapper(data-section="4")
       .form-content.absolute-center
         h2.form-header What Carrier?
         .owned-carrier-options
-          button.form-optn.border-trans(data-attr="carrier", data-val="1")
-            img.owned-carrier-img.verizon-img(src="images/Verizon_logo.svg")
-          button.form-optn.border-trans(data-attr="carrier", data-val="2")
+          button.form-optn.border-trans(data-model="phone", data-attr="carrier", data-val="1")
+            img.owned-carrier-img(src="images/Verizon_logo.svg")
+          button.form-optn.border-trans(data-model="phone", data-attr="carrier", data-val="2")
             img.owned-carrier-img(src="images/AT&T-logo.svg")
-          button.form-optn.border-trans(data-attr="carrier", data-val="3")
+          button.form-optn.border-trans(data-model="phone", data-attr="carrier", data-val="3")
             img.owned-carrier-img(src="images/sprint-logo.svg")
-          button.form-optn.border-trans(data-attr="carrier", data-val="4")
+          button.form-optn.border-trans(data-model="phone", data-attr="carrier", data-val="4")
             img.owned-carrier-img(src="images/tmobile-logo.svg")
-          button.form-optn.border-trans(data-attr="carrier", data-val="100")
+          button.form-optn.border-trans(data-model="phone", data-attr="carrier", data-val="100")
             img.owned-carrier-img(src="images/unlocked.svg")
-          button.form-optn.border-trans(data-attr="carrier", data-val="300")
+          button.form-optn.border-trans(data-model="phone", data-attr="carrier", data-val="300")
             img.owned-carrier-img(src="images/other.svg")
-          button.form-optn.border-trans(data-attr="carrier", data-val="900") 
+          button.form-optn.border-trans(data-model="phone", data-attr="carrier", data-val="900") 
             img.owned-carrier-img(src="images/unknown.svg")
         .owned-model-labels
           span Verizon
@@ -93,13 +93,13 @@ block content
         .two-col-options
           .col-options
             h3 Q1
-            button.form-optn.bg-trans.yes-btn(data-attr="pwr", data-val="0") Yes
-            button.form-optn.bg-trans.no-btn(data-attr="pwr", data-val="1") No
+            button.form-optn.bg-trans.yes-btn(data-model="issues", data-attr="pwr", data-val="0") Yes
+            button.form-optn.bg-trans.no-btn(data-model="issues", data-attr="pwr", data-val="1") No
           .col-options
             h3 Q2
-            button.form-optn.bg-trans.yes-btn(data-attr="canRestr", data-val="0") Yes
-            button.form-optn.bg-trans.no-btn(data-attr="canRestr", data-val="1") No
-            button.form-optn.bg-trans.idk-btn(data-attr="canRestr", data-val="2") I Don't Know
+            button.form-optn.bg-trans.yes-btn(data-model="issues", data-attr="canRestr", data-val="0") Yes
+            button.form-optn.bg-trans.no-btn(data-model="issues", data-attr="canRestr", data-val="1") No
+            button.form-optn.bg-trans.idk-btn(data-model="issues", data-attr="canRestr", data-val="2") I Don't Know
         button.back Back
 
 
@@ -109,14 +109,14 @@ block content
         .two-col-options
           .col-options
             h3 Q1
-            button.form-optn.bg-trans.yes-btn(data-attr="noWifi", data-val="0") Yes
-            button.form-optn.bg-trans.no-btn(data-attr="noWifi", data-val="1") No
-            button.form-optn.bg-trans.idk-btn(data-attr="noWifi", data-val="2") I Don't Know
+            button.form-optn.bg-trans.yes-btn(data-model="issues", data-attr="noWifi", data-val="0") Yes
+            button.form-optn.bg-trans.no-btn(data-model="issues", data-attr="noWifi", data-val="1") No
+            button.form-optn.bg-trans.idk-btn(data-model="issues", data-attr="noWifi", data-val="2") I Don't Know
           .col-options
             h3 Q2
-            button.form-optn.bg-trans.yes-btn(data-attr="noBlth", data-val="0") Yes
-            button.form-optn.bg-trans.no-btn(data-attr="noBlth", data-val="1") No
-            button.form-optn.bg-trans.idk-btn(data-attr="noBlth", data-val="2") I Don't Know
+            button.form-optn.bg-trans.yes-btn(data-model="issues", data-attr="noBlth", data-val="0") Yes
+            button.form-optn.bg-trans.no-btn(data-model="issues", data-attr="noBlth", data-val="1") No
+            button.form-optn.bg-trans.idk-btn(data-model="issues", data-attr="noBlth", data-val="2") I Don't Know
         button.back Back
 
 
@@ -126,19 +126,19 @@ block content
         .three-col-options
           .col-options
             h3 Q1
-            button.form-optn.bg-trans.yes-btn(data-attr="wtrDmg", data-val="1") Yes
-            button.form-optn.bg-trans.no-btn(data-attr="wtrDmg", data-val="0") No
-            button.form-optn.bg-trans.idk-btn(data-attr="wtrDmg", data-val="2") I Don't Know
+            button.form-optn.bg-trans.yes-btn(data-model="issues", data-attr="wtrDmg", data-val="1") Yes
+            button.form-optn.bg-trans.no-btn(data-model="issues", data-attr="wtrDmg", data-val="0") No
+            button.form-optn.bg-trans.idk-btn(data-model="issues", data-attr="wtrDmg", data-val="2") I Don't Know
           .col-options
             h3 Q2
-            button.form-optn.bg-trans.yes-btn(data-attr="hasSvc", data-val="0") Yes
-            button.form-optn.bg-trans.no-btn(data-attr="hasSvc", data-val="1") No
-            button.form-optn.bg-trans.idk-btn(data-attr="hasSvc", data-val="2") I Don't Know
+            button.form-optn.bg-trans.yes-btn(data-model="issues", data-attr="hasSvc", data-val="0") Yes
+            button.form-optn.bg-trans.no-btn(data-model="issues", data-attr="hasSvc", data-val="1") No
+            button.form-optn.bg-trans.idk-btn(data-model="issues", data-attr="hasSvc", data-val="2") I Don't Know
           .col-options
             h3 Q2
-            button.form-optn.bg-trans.yes-btn(data-attr="iCldLk", data-val="1") Yes
-            button.form-optn.bg-trans.no-btn(data-attr="iCldLk", data-val="0") No
-            button.form-optn.bg-trans.idk-btn(data-attr="iCldLk", data-val="2") I Don't Know
+            button.form-optn.bg-trans.yes-btn(data-model="issues", data-attr="iCldLk", data-val="1") Yes
+            button.form-optn.bg-trans.no-btn(data-model="issues", data-attr="iCldLk", data-val="0") No
+            button.form-optn.bg-trans.idk-btn(data-model="issues", data-attr="iCldLk", data-val="2") I Don't Know
         button.back Back
 
 
@@ -146,9 +146,9 @@ block content
       .form-content.absolute-center
         h2.form-header Is The Phone Blocked From Your Network Provider?
         .col-options
-          button.form-optn.bg-trans.yes-btn(data-attr="clnESN", data-val="1") Yes
-          button.form-optn.bg-trans.no-btn(data-attr="clnESN", data-val="0") No
-          button.form-optn.bg-trans.idk-btn(data-attr="clnESN", data-val="2") I Don't Know
+          button.form-optn.bg-trans.yes-btn(data-model="issues", data-attr="clnESN", data-val="1") Yes
+          button.form-optn.bg-trans.no-btn(data-model="issues", data-attr="clnESN", data-val="0") No
+          button.form-optn.bg-trans.idk-btn(data-model="issues", data-attr="clnESN", data-val="2") I Don't Know
         button.back Back
 
 
@@ -156,9 +156,9 @@ block content
       .form-content.absolute-center
         h2.form-header Has The Phone Been Opened Or Repaired Before?
         .col-options
-          button.form-optn.bg-trans.yes-btn(data-attr="opnd", data-val="1") Yes
-          button.form-optn.bg-trans.no-btn(data-attr="opnd", data-val="0") No
-          button.form-optn.bg-trans.idk-btn(data-attr="opnd", data-val="2") I Don't Know
+          button.form-optn.bg-trans.yes-btn(data-model="issues", data-attr="opnd", data-val="1") Yes
+          button.form-optn.bg-trans.no-btn(data-model="issues", data-attr="opnd", data-val="0") No
+          button.form-optn.bg-trans.idk-btn(data-model="issues", data-attr="opnd", data-val="2") I Don't Know
         button.back Back
 
 
@@ -168,16 +168,16 @@ block content
         .three-col-options
           .col-options
             h3 Q1
-            button.form-optn.bg-trans.yes-btn(data-attr="ftGlass", data-val="0") Okay
-            button.form-optn.bg-trans.no-btn(data-attr="ftGlass", data-val="1") Broken
+            button.form-optn.bg-trans.yes-btn(data-model="components", data-attr="ftGlass", data-val="0") Okay
+            button.form-optn.bg-trans.no-btn(data-model="components", data-attr="ftGlass", data-val="1") Broken
           .col-options
             h3 Q2
-            button.form-optn.bg-trans.yes-btn(data-attr="bkGlass", data-val="0") Okay
-            button.form-optn.bg-trans.no-btn(data-attr="bkGlass", data-val="1") Broken
+            button.form-optn.bg-trans.yes-btn(data-model="components", data-attr="housing", data-val="0") Okay
+            button.form-optn.bg-trans.no-btn(data-model="components", data-attr="housing", data-val="1") Broken
           .col-options
             h3 Q2
-            button.form-optn.bg-trans.yes-btn(data-attr="batt", data-val="0") Okay
-            button.form-optn.bg-trans.no-btn(data-attr="batt", data-val="1") Poor
+            button.form-optn.bg-trans.yes-btn(data-model="components", data-attr="batt", data-val="0") Okay
+            button.form-optn.bg-trans.no-btn(data-model="components", data-attr="batt", data-val="1") Poor
         button.back Back
 
 
@@ -187,21 +187,29 @@ block content
         .four-col-options
           .col-options
             h3 Q1
-            button.form-optn.bg-trans.no-reset.issue-btn(data-attr="lkBtn", data-val="1") Lock Button
-            button.form-optn.bg-trans.no-reset.issue-btn(data-attr="hmBtn", data-val="1") Home Button
-            button.form-optn.bg-trans.no-reset.issue-btn(data-attr="volBtn", data-val="1") Volume Button
-            button.form-optn.bg-trans.no-reset.issue-btn(data-attr="vbrSwch", data-val="1") Vibrate Switch
+            button.form-optn.bg-trans.no-reset.issue-btn(data-model="components", data-attr="lkBtn", data-val="1") Lock Button
+            button.form-optn.bg-trans.no-reset.issue-btn(data-model="components", data-attr="hmBtn", data-val="1") Home Button
+            button.form-optn.bg-trans.no-reset.issue-btn(data-model="components", data-attr="volBtn", data-val="1") Volume Button
+            button.form-optn.bg-trans.no-reset.issue-btn(data-model="components", data-attr="vbrSwch", data-val="1") Vibrate Switch
           .col-options
             h3 Q1
-            button.form-optn.bg-trans.no-reset.issue-btn(data-attr="chrgr", data-val="1") Charging Port
-            button.form-optn.bg-trans.no-reset.issue-btn(data-attr="hpJack", data-val="1") Headphone Jack
+            button.form-optn.bg-trans.no-reset.issue-btn(data-model="components", data-attr="chrgr", data-val="1") Charging Port
+            button.form-optn.bg-trans.no-reset.issue-btn(data-model="components", data-attr="hpJack", data-val="1") Headphone Jack
           .col-options
             h3 Q1
-            button.form-optn.bg-trans.no-reset.issue-btn(data-attr="spkr", data-val="1") Loud Speaker
-            button.form-optn.bg-trans.no-reset.issue-btn(data-attr="earSpkr", data-val="1") Ear Speaker
-            button.form-optn.bg-trans.no-reset.issue-btn(data-attr="mic", data-val="1") Microphone
+            button.form-optn.bg-trans.no-reset.issue-btn(data-model="components", data-attr="spkr", data-val="1") Loud Speaker
+            button.form-optn.bg-trans.no-reset.issue-btn(data-model="components", data-attr="earSpkr", data-val="1") Ear Speaker
+            button.form-optn.bg-trans.no-reset.issue-btn(data-model="components", data-attr="mic", data-val="1") Microphone
           .col-options
             h3 Q1
-            button.form-optn.bg-trans.no-reset.issue-btn(data-attr="bkCmra", data-val="1") Rear Camera
-            button.form-optn.bg-trans.no-reset.issue-btn(data-attr="ftCmra", data-val="1") Front Camera
+            button.form-optn.bg-trans.no-reset.issue-btn(data-model="components", data-attr="bkCmra", data-val="1") Rear Camera
+            button.form-optn.bg-trans.no-reset.issue-btn(data-model="components", data-attr="ftCmra", data-val="1") Front Camera
         button.back Back
+        button.submit Submit
+
+    .review-content-wrapper(data-section="12")
+      span TEST!
+
+    .store-content-wrapper(data-section="13")
+      span TEST :2!
+      span.owned-price-container
