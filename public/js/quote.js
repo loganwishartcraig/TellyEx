@@ -6,7 +6,7 @@ $(document).ready(function() {
   // Global Vars
 
   var hoverBorderColor = "#f26ae9";
-  var baseBorderColor = "#e8e8e8";
+  var baseBorderColor = "#202020";
   var selectedBorderColor = "#f26ae9";
 
   var lastScrollTop = 0;
@@ -117,7 +117,7 @@ $(document).ready(function() {
     var initTxtColor = node.css("color");
     node.css("background", initTxtColor);
     node.css("color", rgb2hex(initBgColor));
-    node.css("border-color", baseBorderColor)
+    node.css("border-color", node.css("color"))
 
     return;
   }
@@ -132,7 +132,7 @@ $(document).ready(function() {
     }
 
     node.removeClass('selected');
-    node.css("border-color", baseBorderColor);
+    node.css("border-color", node.css("background-color"));
 
 
   }
@@ -195,7 +195,7 @@ $(document).ready(function() {
     if ($(this).hasClass('selected')) {
       return;
     } else {
-      $(this).css("border-color", baseBorderColor);
+      $(this).css("border-color", $(this).css("color"));
       return;
     }
   })

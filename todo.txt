@@ -1,11 +1,26 @@
 Review Frontend
+
 Tablet CSS
+
 Mobile CSS
-ie 8?
+
+ie 8 "fallback"
+
+Add light animations to form
+Design/Create Review page
+Design/Create Store flow
 
 Setup order database
+
 Setup payment processing
+
 Setup confirmation email
+
 Setup check order
 
+
+
 integrate auto prefixer, & gzip
+
+Update price list
+Price list update automation?
