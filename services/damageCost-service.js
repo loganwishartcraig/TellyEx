@@ -15,8 +15,6 @@ exports.findDamagePrice = function(obj, next) {
 
   console.log("trying to find phones worth...")
 
-  var searchString = "Phone.Brand"
-
   damageCosts.find({"Phone.Brand": 1}).
     where("Phone.Model").equals(obj.phone.model).
     where("Phone.Capacity").equals(obj.phone.capacity).
