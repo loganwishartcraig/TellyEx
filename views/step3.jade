@@ -1,0 +1,152 @@
+extends ./modules/base.jade
+
+block title
+  title TellyEx | Get A Quote
+
+block append style
+  link(href='/css/step3.css', rel='stylesheet', type='text/css')
+
+block scripts
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+  script(src="/js/step3.js")
+
+block content
+  include ./modules/nav.jade
+
+
+  .global-page-wrapper
+    .q-wrapper
+      h1.section-header The Components
+      span.section-subhead Finally, we need to identify any faulty components your phone may have.
+      span.section-indicator.q-label Section 3 of 3
+
+    .q-wrapper
+      h1.q-header Front Screen
+      svg.q-image(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', xmlns:a='http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/', x='0px', y='0px', width='108.1px', height='185.7px', viewbox='0 0 108.1 185.7', enable-background='new 0 0 108.1 185.7', xml:space='preserve')
+        defs
+        path(fill='#2E6982', d='M103.1,185.7H4.9c-2.7,0-4.9-2.2-4.9-4.9V4.9C0,2.2,2.2,0,4.9,0h98.2c2.7,0,4.9,2.2,4.9,4.9v175.9\
+        C108.1,183.5,105.8,185.7,103.1,185.7z')
+        path(fill='#F7F7F7', d='M94.5,167.7h-81c-2.1,0-3.8-1.7-3.8-3.8V16c0-2.1,1.7-3.8,3.8-3.8h81c2.1,0,3.8,1.7,3.8,3.8v147.9\
+        C98.3,166,96.6,167.7,94.5,167.7z')
+        g
+          rect(x='0.2', y='66.7', transform='matrix(0.6626 0.749 -0.749 0.6626 59.9037 1.3901)', fill='#636363', width='56.4', height='1')
+          rect(x='30.7', y='72.1', transform='matrix(0.9856 0.1692 -0.1692 0.9856 12.9577 -6.769)', fill='#636363', width='31', height='1')
+          rect(x='47.6', y='81.5', transform='matrix(0.2203 0.9754 -0.9754 0.2203 123.4857 9.4482)', fill='#636363', width='16.4', height='1')
+          rect(x='39.6', y='148.7', transform='matrix(0.5466 0.8374 -0.8374 0.5466 152.9156 15.8868)', fill='#636363', width='44.4', height='1')
+          rect(x='45', y='132.4', transform='matrix(1.589203e-002 0.9999 -0.9999 1.589203e-002 193.9475 68.7286)', fill='#636363', width='34.2', height='1')
+          rect(x='69.4', y='95.3', transform='matrix(0.7221 0.6918 -0.6918 0.7221 93.5575 -18.5613)', fill='#636363', width='1', height='23.7')
+          rect(x='49.1', y='34.2', transform='matrix(0.9783 0.2071 -0.2071 0.9783 8.7939 -14.5726)', fill='#636363', width='49.8', height='1')
+          rect(x='58.9', y='27.5', transform='matrix(0.7387 0.674 -0.674 0.7387 36.8599 -39.0587)', fill='#636363', width='19.9', height='1')
+        rect(x='42', y='175.8', fill='#1E5463', width='26', height='3.3')
+      span.q-description
+        | Is the front glass or LCD screen damaged in any way?
+      .q-answers
+        span.help-btn.q-label [help]
+        span.ans-btn.form-option.ans-yes(data-attr="ftGlass", data-val="1") Y
+        span.ans-btn.form-option.ans-no(data-attr="ftGlass", data-val="0") N
+
+    .q-wrapper
+      h1.q-header Housing
+      svg.q-image(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', xmlns:a='http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/', x='0px', y='0px', width='16.3px', height='188.6px', viewbox='0 0 16.3 188.6', enable-background='new 0 0 16.3 188.6', xml:space='preserve')
+        defs
+        path(fill='#919191', d='M10.2,5.5H6c-0.3,0-0.6-0.3-0.6-0.6V0.6C5.3,0.3,5.6,0,6,0h4.2c0.3,0,0.6,0.3,0.6,0.6v4.3\
+        C10.8,5.2,10.6,5.5,10.2,5.5z')
+        path(fill='#2E6982', d='M15.1,187.6H1.3c-0.7,0-1.3-0.6-1.3-1.3V3.2c0-0.7,0.6-1.3,1.3-1.3h13.8c0.7,0,1.3,0.6,1.3,1.3v183.2\
+        C16.3,187.1,15.8,187.6,15.1,187.6z')
+        path(fill='#BCBCBC', d='M14.1,188.6H2.8c-0.3,0-0.5-0.2-0.5-0.5V1.1c0-0.3,0.2-0.5,0.5-0.5h11.3c0.3,0,0.5,0.2,0.5,0.5v187\
+        C14.6,188.4,14.4,188.6,14.1,188.6z')
+        circle(fill='#919191', cx='8.3', cy='53.6', r='3.9')
+        circle(fill='#919191', cx='8.3', cy='73.6', r='3.8')
+        path(fill='#919191', d='M10.9,37.6H5.5c-0.7,0-1.3-0.6-1.3-1.3v-5.7c0-0.7,0.6-1.3,1.3-1.3h5.4c0.7,0,1.3,0.6,1.3,1.3v5.7\
+        C12.2,37,11.6,37.6,10.9,37.6z')
+        g
+          g
+            line(fill='#AFAFAF', x1='2.7', y1='128.4', x2='11.6', y2='111.1')
+            path(fill='#A5A5A5', d='M2.7,128.9c-0.1,0-0.2,0-0.2-0.1c-0.2-0.1-0.3-0.4-0.2-0.7l8.9-17.3c0.1-0.2,0.4-0.3,0.7-0.2\
+            c0.2,0.1,0.3,0.4,0.2,0.7l-8.9,17.3C3,128.8,2.9,128.9,2.7,128.9z')
+          g
+            line(fill='#AFAFAF', x1='3', y1='132.2', x2='11.5', y2='124.8')
+            path(fill='#A5A5A5', d='M3,132.7c-0.1,0-0.3-0.1-0.4-0.2c-0.2-0.2-0.2-0.5,0-0.7l8.5-7.4c0.2-0.2,0.5-0.2,0.7,0\
+            c0.2,0.2,0.2,0.5,0,0.7l-8.5,7.4C3.2,132.7,3.1,132.7,3,132.7z')
+          g
+            line(fill='#AFAFAF', x1='5', y1='136.2', x2='13.5', y2='128.8')
+            path(fill='#A5A5A5', d='M5,136.7c-0.1,0-0.3-0.1-0.4-0.2c-0.2-0.2-0.2-0.5,0-0.7l8.5-7.4c0.2-0.2,0.5-0.2,0.7,0\
+            c0.2,0.2,0.2,0.5,0,0.7l-8.5,7.4C5.2,136.7,5.1,136.7,5,136.7z')
+          g
+            line(fill='#AFAFAF', x1='5', y1='133.5', x2='10.9', y2='133.9')
+            path(fill='#A5A5A5', d='M10.9,134.9C10.9,134.9,10.9,134.9,10.9,134.9l-6-0.7c-0.3,0-0.5-0.4-0.5-0.7s0.3-0.5,0.5-0.5l6,0.4\
+            c0.3,0,0.5,0.5,0.5,0.8C11.4,134.5,11.2,134.9,10.9,134.9z')
+        path(fill='#A5A5A5', d='M13.5,18.4c-0.2,0-0.3-0.1-0.4-0.2l-8.2-13C4.8,4.9,4.8,4.6,5.1,4.5c0.2-0.1,0.5-0.1,0.7,0.2l8.2,13\
+        c0.1,0.2,0.1,0.5-0.2,0.7C13.7,18.4,13.6,18.4,13.5,18.4z')
+        path(fill='#A5A5A5', d='M9.2,18.4C9.2,18.4,9.2,18.4,9.2,18.4c-0.4-0.1-0.5-0.3-0.5-0.6l1.6-9.3c0-0.3,0.3-0.5,0.6-0.4\
+        c0.3,0,0.5,0.3,0.4,0.6L9.7,18C9.7,18.2,9.5,18.4,9.2,18.4z')
+        path(fill='#A5A5A5', d='M5.3,179.9c-0.2,0-0.3-0.1-0.4-0.2c-0.2-0.2-0.1-0.5,0.1-0.7l6.9-4.7c0.2-0.2,0.5-0.1,0.7,0.1\
+        c0.2,0.2,0.1,0.5-0.1,0.7l-6.9,4.7C5.5,179.8,5.4,179.9,5.3,179.9z')
+      span.q-description
+        | Is the metal housing or back glass bent or cracked?
+      .q-answers
+        span.help-btn.q-label [help]
+        span.ans-btn.form-option.ans-yes(data-attr="housing", data-val="1") Y
+        span.ans-btn.form-option.ans-no(data-attr="housing", data-val="0") N
+
+    .q-wrapper
+      h1.q-header Battery
+      svg.q-image(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', xmlns:a='http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/', x='0px', y='0px', width='371.2px', height='800px', viewbox='0 0 371.2 800', enable-background='new 0 0 371.2 800', xml:space='preserve')
+        defs
+        path(fill='#232323', d='M351.2,800H20c-11,0-20-9-20-20V20C0,9,9,0,20,0h331.1c11,0,20,9,20,20V780C371.2,791,362.2,800,351.2,800z')
+        rect(x='53.1', y='82.7', fill='#424242', width='263.5', height='72.1')
+        g
+          rect(x='68.1', y='502.4', fill='#424242', width='230.4', height='15')
+          rect(x='68.1', y='534', fill='#424242', width='230.4', height='15')
+          rect(x='68.1', y='564.6', fill='#424242', width='230.4', height='15')
+          rect(x='68.1', y='595.6', fill='#424242', width='230.4', height='15')
+          rect(x='68.1', y='625.2', fill='#424242', width='146.8', height='15')
+          rect(x='68.1', y='729.9', fill='#424242', width='65.6', height='15')
+          rect(x='268.5', y='729.9', fill='#424242', width='25.5', height='15')
+        path(fill='#424242', d='M86.7,408.7H283c2.4,0,4-2.7,2.7-4.8l-98.2-166.3c-1.2-2.1-4.2-2.1-5.4,0L84,403.9\
+        C82.7,406,84.2,408.7,86.7,408.7z')
+
+      span.q-description
+        | Do you normally need to charge the phone more than once daily?
+      .q-answers
+        span.help-btn.q-label [help]
+        span.ans-btn.form-option.ans-yes(data-attr="batt", data-val="1") Y
+        span.ans-btn.form-option.ans-no(data-attr="batt", data-val="0") N
+
+
+    .q-wrapper
+      h1.q-header Other Components
+      .q-component-answers
+        .component-answer
+          h3.component-header Buttons
+          ul
+            li.form-option.multi-select.default-no(data-attr="lkBtn", data-val="1") Lock Button
+            li.form-option.multi-select.default-no(data-attr="hmBtn", data-val="1") Home Button
+            li.form-option.multi-select.default-no(data-attr="volBtn", data-val="1") Volume Buttons
+            li.form-option.multi-select.default-no(data-attr="vbrSwch", data-val="1") Vibrate Switch
+        .component-answer
+          h3.component-header Ports
+          ul
+            li.form-option.multi-select.default-no(data-attr="hpJack", data-val="1") Headphone Jack
+            li.form-option.multi-select.default-no(data-attr="chrgr", data-val="1") Charging Port
+        .component-answer
+          h3.component-header Camera
+          ul
+            li.form-option.multi-select.default-no(data-attr="bkCmra", data-val="1") Rear Camera
+            li.form-option.multi-select.default-no(data-attr="ftCmra", data-val="1") Front Camera
+        .component-answer
+          h3.component-header Audio
+          ul
+            li.form-option.multi-select.default-no(data-attr="earSpkr", data-val="1") Ear Speaker
+            li.form-option.multi-select.default-no(data-attr="spkr", data-val="1") Loud Speaker
+            li.form-option.multi-select.default-no(data-attr="mic", data-val="1") Micorophone
+
+
+
+      span.q-description
+        | Are there any broken buttons or other damaged components?
+      .q-answers
+
+    .q-finish
+      span.err-text
+      button.next-btn Next

@@ -1,15 +1,1 @@
-<svg version="1.1"
-	 id="Layer_1" sodipodi:docname="AJAX.svg" inkscape:version="0.48.1 " xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#" xmlns:svg="http://www.w3.org/2000/svg"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="305.4 383.1 41.9 33.9"
-	 enable-background="new 305.4 383.1 41.9 33.9" xml:space="preserve">
-<sodipodi:namedview  inkscape:current-layer="Layer_1" inkscape:window-maximized="1" inkscape:window-y="-8" inkscape:window-x="-8" fit-margin-bottom="0" fit-margin-right="0" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-height="1004" inkscape:window-width="1280" inkscape:zoom="2.4350534" fit-margin-left="0" pagecolor="#ffffff" bordercolor="#666666" inkscape:cy="6.4711528" borderopacity="1" fit-margin-top="0" objecttolerance="10" id="namedview31" inkscape:cx="180.04953" showgrid="false" gridtolerance="10" guidetolerance="10">
-	</sodipodi:namedview>
-<path fill="#2D2D2D" d="M323.4,416.9H318c-0.8,0-1.4-0.6-1.4-1.4v-19.3c0-0.8,0.6-1.4,1.4-1.4h5.4c0.8,0,1.4,0.6,1.4,1.4v19.3
-	C324.8,416.3,324.2,416.9,323.4,416.9z"/>
-<path fill="#2D2D2D" d="M334.6,416.9h-5.4c-0.8,0-1.4-0.6-1.4-1.4v-25c0-0.8,0.6-1.4,1.4-1.4h5.4c0.8,0,1.4,0.6,1.4,1.4v25
-	C336,416.3,335.4,416.9,334.6,416.9z"/>
-<path fill="#2D2D2D" d="M312.2,416.9h-5.4c-0.8,0-1.4-0.6-1.4-1.4v-13.9c0-0.8,0.6-1.4,1.4-1.4h5.4c0.8,0,1.4,0.6,1.4,1.4v13.9
-	C313.6,416.3,313,416.9,312.2,416.9z"/>
-<path fill="#2D2D2D" d="M345.8,416.9h-5.4c-0.8,0-1.4-0.6-1.4-1.4v-31.1c0-0.8,0.6-1.4,1.4-1.4h5.4c0.8,0,1.4,0.6,1.4,1.4v31.1
-	C347.2,416.3,346.6,416.9,345.8,416.9z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="305.4 383.1 41.9 33.9"><path fill="#2D2D2D" d="M323.4 416.9H318c-.8 0-1.4-.6-1.4-1.4v-19.3c0-.8.6-1.4 1.4-1.4h5.4c.8 0 1.4.6 1.4 1.4v19.3c0 .8-.6 1.4-1.4 1.4zM334.6 416.9h-5.4c-.8 0-1.4-.6-1.4-1.4v-25c0-.8.6-1.4 1.4-1.4h5.4c.8 0 1.4.6 1.4 1.4v25c0 .8-.6 1.4-1.4 1.4zM312.2 416.9h-5.4c-.8 0-1.4-.6-1.4-1.4v-13.9c0-.8.6-1.4 1.4-1.4h5.4c.8 0 1.4.6 1.4 1.4v13.9c0 .8-.6 1.4-1.4 1.4zM345.8 416.9h-5.4c-.8 0-1.4-.6-1.4-1.4v-31.1c0-.8.6-1.4 1.4-1.4h5.4c.8 0 1.4.6 1.4 1.4v31.1c0 .8-.6 1.4-1.4 1.4z"/></svg>

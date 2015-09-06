@@ -1,0 +1,88 @@
+extends ./modules/base.jade
+
+block title
+  title TellyEx | Get A Quote
+
+block append style
+  link(href='/css/step1.css', rel='stylesheet', type='text/css')
+
+block scripts
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+  script(src="/js/step1.js")
+
+block content
+  include ./modules/nav.jade
+
+
+  .global-page-wrapper
+    .q-wrapper
+      h1.section-header The Phone
+      span.section-subhead First we need to identify what kind of phone you currently have
+      span.section-indicator.q-label Section 1 of 3
+
+
+    .q-wrapper
+      h1.q-header Model
+      .q-model-options
+        .q-model.form-option(data-attr="model", data-val="1")
+          img.q-model-img(src="/images/iPhones/iPhone_5_black.png")
+        .q-model.form-option(data-attr="model", data-val="2")
+          img.q-model-img(src="/images/iPhones/iPhone_5s_black.png")
+        .q-model.form-option(data-attr="model", data-val="3")
+          img.q-model-img.six(src="/images/iPhones/iPhone_6_black.png")
+        .q-model.form-option(data-attr="model", data-val="4")
+          img.q-model-img.sixp(src="/images/iPhones/iPhone_6p_black.png")
+      .q-model-labels
+          span.q-label iPhone 5
+          span.q-label iPhone 5s
+          span.q-label iPhone 6
+          span.q-label iPhone 6+
+      span.q-description
+        | Select your current model.
+
+    .q-wrapper
+      h1.q-header Color
+      .q-details-options
+        .q-detail.form-option.color-black(data-attr="color", data-val="1")
+        .q-detail.form-option.color-silver(data-attr="color", data-val="2")
+        .q-detail.form-option.color-gold(data-attr="color", data-val="3")
+      .q-details-labels
+        span.q-label Black/Grey
+        span.q-label Silver/White
+        span.q-label Gold
+      span.q-description
+        | Select your phones color.
+
+    .q-wrapper
+      h1.q-header Capacity
+      .q-details-options
+        span.q-detail.form-option.q-capacity.capacity-16(data-attr="capacity", data-val="1") 16
+        span.q-detail.form-option.q-capacity.capacity-32(data-attr="capacity", data-val="2") 32
+        span.q-detail.form-option.q-capacity.capacity-64(data-attr="capacity", data-val="3") 64
+      .q-details-labels
+        span.q-label 16GB
+        span.q-label 32GB
+        span.q-label 64GB
+      span.q-description
+        | Select your phones storeage capacity.
+
+    .q-wrapper
+      h1.q-header Carrier
+      .q-carrier-options
+        .q-carrier-arrow
+        span.q-carrier-selection-default Select Carrier...
+        ul.q-carrier-selections
+          li.q-carrier(data-attr="carrier", data-val="1") Verizon
+          li.q-carrier(data-attr="carrier", data-val="2") T-Mobile
+          li.q-carrier(data-attr="carrier", data-val="3") AT&T
+          li.q-carrier(data-attr="carrier", data-val="4") Sprint
+          li.q-carrier(data-attr="carrier", data-val="100") Unlocked
+          li.q-carrier(data-attr="carrier", data-val="300") Other
+          li.q-carrier(data-attr="carrier", data-val="900") Unknown
+      span.q-description.carrier-description
+        | Select your phones current cellular service provider.
+
+
+    .q-finish
+      span.err-text
+      button.next-btn Next

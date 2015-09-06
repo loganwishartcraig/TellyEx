@@ -1,0 +1,147 @@
+@import "modules/modules.sass"
+
+$yesAnsActive: rgba(76, 153, 42, 0.57)
+$noAnsActive: rgba(245, 67, 51, 0.6)
+$genericBorderColor: #D6D5D5
+$hoverColor: #2c4151
+$genericTransitionTime: .2s
+
+.global-page-wrapper
+  height: 100%
+
+
+.q-wrapper 
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+  width: 100%
+  max-width: 750px
+  height: 100%
+  min-height: 310px
+  margin: 0 auto
+  padding: 1em 0
+
+  border-bottom: 1px dashed #EFEFEF
+  
+  box-sizing: border-box
+  text-align: center
+
+.q-header
+  padding-bottom: 1rem
+  border-bottom: 1px solid $genericBorderColor
+  
+
+.section-subhead
+  padding: 1em 0
+  border-bottom: 1px solid $genericBorderColor
+
+.section-indicator
+  padding-top: 1rem
+  color: #A0A0A0
+  font-style: italic
+  
+.q-description
+  font-size: 1.1rem
+  margin-bottom: 2em
+
+.q-answers
+  position: relative
+  border-top: 1px solid $genericBorderColor
+  padding-top: 1rem
+
+.q-image
+  width: 13vw
+  height: 13vw
+  margin: 1.5em auto
+
+
+.power-image
+  padding: 1vh 0
+  box-sizing: border-box
+
+.repairs-image, .water-image, .lock-img
+  padding: 2vh 0
+  box-sizing: border-box
+
+
+.ans-btn
+  display: inline-block
+  height: 5vw
+  width: 5vw
+  line-height: 5vw
+  cursor: pointer
+  vertical-align: middle
+  font-size: 1.5rem
+  border-radius: 50%
+  transition: all $genericTransitionTime ease-in-out
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+.ans-yes
+  color: #4C992A
+  border: 1px solid #4C992A
+  margin-right: 3rem
+  &:hover
+    border-color: transparent
+    box-shadow: 0px 0px 0px 5px $yesAnsActive
+    
+.ans-no
+  color: #F54333
+  border: 1px solid #F54333
+  &:hover
+    border-color: transparent
+    box-shadow: 0px 0px 0px 5px $noAnsActive
+  
+.help-btn
+  position: absolute
+  left: 17%
+  top: 50%
+  vertical-align: middle
+  color: #A0A0A0
+  cursor: pointer
+  border-bottom: 1px solid $genericBorderColor
+  padding-bottom: 0.1rem
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+  &:hover
+    color: #A0A0A0
+  
+// .nav-back
+//   margin-right: 8vw
+  
+// .nav-next
+//   margin-left: 8vw
+  
+.ans-no.selected
+  border-color: transparent
+  box-shadow: 0px 0px 0px 5px rgba(245, 67, 51, 0.6)
+
+.ans-yes.selected
+  border-color: transparent
+  box-shadow: 0px 0px 0px 5px rgba(76, 153, 42, 0.57)
+
+.next-btn
+  display: block
+  width: 30%
+  margin: 1.5rem auto
+  padding: 1.5rem 0
+  border: 1px solid #D5D5D5
+  border-radius: 100px  
+  transition: border $genericTransitionTime ease-in-out
+
+.err-text
+  color: red
+  display: block
+  margin: 0 auto
+  width: 100%
+  text-align: center

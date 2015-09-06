@@ -1,0 +1,134 @@
+extends ./modules/base.jade
+
+block title
+  title TellyEx | Get A Quote
+
+block append style
+  link(href='/css/step2.css', rel='stylesheet', type='text/css')
+
+block scripts
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+  script(src="/js/step2.js")
+
+block content
+  include ./modules/nav.jade
+
+
+  .global-page-wrapper
+    .q-wrapper
+      h1.section-header The Issues
+      span.section-subhead Now we need to identify any software issues your phone might have
+      span.section-indicator.q-label Section 2 of 3
+
+    .q-wrapper
+      h1.q-header Power
+      svg.q-image.power-image(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', xmlns:a='http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/', x='0px', y='0px', width='612px', height='631.7px', viewbox='0 0 612 631.7', enable-background='new 0 0 612 631.7', xml:space='preserve')
+        defs
+        g#Off_1_
+          g
+            path(fill='#515151', d='M479.9,74.4c-5-3.5-10.8-5.2-16.5-5.3c-9.5-0.1-18.9,4.3-24.7,12.7c-9.3,13.5-6,31.9,7.5,41.2\
+            c66.8,46.2,106.6,122,106.6,202.7c0,136.1-110.7,246.8-246.8,246.8S59.2,461.8,59.2,325.7c0-80.7,39.9-156.4,106.6-202.7\
+            c13.5-9.3,16.8-27.8,7.5-41.2c-5.9-8.5-15.6-13-25.3-12.7c-5.5,0.2-11.1,1.9-16,5.2C49.4,131.7,0,225.6,0,325.7\
+            c0,168.7,137.3,306,306,306s306-137.3,306-306C612,225.6,562.6,131.7,479.9,74.4z M306,236.9c16.4,0,29.6-13.3,29.6-29.6V29.6\
+            C335.6,13.3,322.4,0,306,0s-29.6,13.3-29.6,29.6v177.7C276.4,223.6,289.6,236.9,306,236.9z')
+      span.q-description
+        | Does the unit power on and stay on?
+      .q-answers
+        span.help-btn.q-label [help]
+        span.ans-btn.form-option.ans-yes(data-attr="pwr", data-val="0") Y
+        span.ans-btn.form-option.ans-no(data-attr="pwr", data-val="1") N
+
+    .q-wrapper
+      h1.q-header iCloud Lock
+      svg.q-image.lock-img(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', xmlns:a='http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/', x='0px', y='0px', width='328.9px', height='402px', viewbox='0 0 328.9 402', enable-background='new 36.5 0 328.9 402', xml:space='preserve')
+        defs
+        g
+          path(fill='#515151', d='M320.9,190.7c-5.3-5.3-11.8-8-19.4-8h-9.1v-54.8c0-35-12.6-65.1-37.7-90.2C229.5,12.6,199.5,0,164.4,0\
+          c-35,0-65.1,12.6-90.2,37.7c-25.1,25.1-37.7,55.2-37.7,90.2v54.8h-9.1c-7.6,0-14.1,2.7-19.4,8c-5.3,5.3-8,11.8-8,19.4v164.5\
+          c0,7.6,2.7,14.1,8,19.4c5.3,5.3,11.8,8,19.4,8h274.1c7.6,0,14.1-2.7,19.4-8c5.3-5.3,8-11.8,8-19.4V210.1\
+          C328.9,202.5,326.2,196.1,320.9,190.7z M237.5,182.7H91.4v-54.8c0-20.2,7.1-37.4,21.4-51.7c14.3-14.3,31.5-21.4,51.7-21.4\
+          c20.2,0,37.4,7.1,51.7,21.4c14.3,14.3,21.4,31.5,21.4,51.7V182.7z')
+      span.q-description
+        | Is the unit currently locked to an iCloud account?
+      .q-answers
+        span.help-btn.q-label [help]
+        span.ans-btn.form-option.ans-yes(data-attr="iCldLk", data-val="1") Y
+        span.ans-btn.form-option.ans-no(data-attr="iCldLk", data-val="0") N
+
+    .q-wrapper
+      h1.q-header Water Damaged
+      svg.q-image.water-image(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', xmlns:a='http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/', x='0px', y='0px', width='366.1px', height='515px', viewbox='0 0 366.1 515', enable-background='new 74.4 0 366.1 515', xml:space='preserve')
+        defs
+        g
+          g
+            path(fill='#515151', d='M241.7,85.8c-24.6-35.3-45.8-65.8-51-80.4c-1.1-3.2-4.1-5.4-7.6-5.4c-3.1,0.1-6.5,2-7.7,5.2\
+            C170.2,19,150,48,126.7,81.5C73.2,158.3,0,263.5,0,331.9c0,100.9,82.1,183,183,183s183-82.1,183-183\
+            C366.1,264.6,294.2,161.3,241.7,85.8z')
+      span.q-description
+        | Has the unit ever been exposed to water?
+      .q-answers
+        span.help-btn.q-label [help]
+        span.ans-btn.form-option.ans-yes(data-attr="wtrDmg", data-val="1") Y
+        span.ans-btn.form-option.ans-no(data-attr="wtrDmg", data-val="0") N
+
+    .q-wrapper
+      h1.q-header Firmware Restore
+      svg.q-image(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', xmlns:a='http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/', x='0px', y='0px', width='800px', height='632.4px', viewbox='0 0 800 632.4', enable-background='new 240 83.8 800 632.4', xml:space='preserve')
+        defs
+        g
+          path(fill='#515151', d='M800,235.5L490.2,471V347.4C277.2,326.9,72.8,408.4,0,632.4c-0.8-288.2,236.6-451.5,490.2-506.6V0\
+          L800,235.5z')
+      span.q-description
+        | Are you able to restore the phone in iTunes?
+      .q-answers
+        span.help-btn.q-label [help]
+        span.ans-btn.form-option.ans-yes(data-attr="canRestr", data-val="0") Y
+        span.ans-btn.form-option.ans-no(data-attr="canRestr", data-val="1") N
+
+    .q-wrapper
+      h1.q-header Wi-fi
+      svg.q-image(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', xmlns:a='http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/', x='0px', y='0px', width='612px', height='447.1px', viewbox='0 0 612 447.1', enable-background='new 0 82.4 612 447.1', xml:space='preserve')
+        defs
+        g
+          path(fill='#515151', d='M306,335.3c-30.9,0-55.9,25-55.9,55.9c0,30.8,25,55.9,55.9,55.9s55.9-25,55.9-55.9\
+          C361.9,360.4,336.8,335.3,306,335.3z M605.4,139.9C530.7,51,421.5,0,306,0S81.3,51,6.6,139.9c-9.9,11.8-8.4,29.4,3.4,39.4\
+          c5.2,4.4,11.6,6.6,17.9,6.6c8,0,15.9-3.4,21.4-10C113.4,99.6,207,55.9,306,55.9s192.6,43.7,256.7,120c5.5,6.6,13.5,10,21.4,10\
+          c6.4,0,12.7-2.1,18-6.6C613.8,169.4,615.4,151.7,605.4,139.9z M306,111.8c-82.5,0-160.5,36.4-213.9,99.9\
+          c-9.9,11.8-8.4,29.4,3.4,39.4c5.2,4.4,11.6,6.6,18,6.6c8,0,15.9-3.4,21.4-10c42.7-50.8,105.1-80,171.1-80s128.4,29.2,171.1,80\
+          c5.5,6.6,13.5,10,21.4,10c6.4,0,12.7-2.1,18-6.6c11.8-9.9,13.4-27.6,3.4-39.4C466.5,148.2,388.5,111.8,306,111.8z M306,223.5\
+          c-49.6,0-96.3,21.9-128.3,59.9c-9.9,11.8-8.4,29.4,3.4,39.4c5.2,4.4,11.6,6.6,18,6.6c8,0,15.9-3.4,21.4-10\
+          c21.4-25.4,52.6-40,85.5-40s64.2,14.6,85.5,40c5.5,6.6,13.5,10,21.4,10c6.4,0,12.7-2.1,18-6.6c11.8-9.9,13.4-27.6,3.4-39.4\
+          C402.3,245.4,355.5,223.5,306,223.5z')
+      span.q-description
+        | Can the unit connect to wi-fi networks?
+      .q-answers
+        span.help-btn.q-label [help]
+        span.ans-btn.form-option.ans-yes(data-attr="noWifi", data-val="0") Y
+        span.ans-btn.form-option.ans-no(data-attr="noWifi", data-val="1") N
+
+    .q-wrapper
+      h1.q-header Previous Repairs
+      svg.q-image.repairs-image(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', xmlns:a='http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/', x='0px', y='0px', width='124px', height='124.1px', viewbox='0 0 124 124.1', enable-background='new 299 -291 124 124.1', xml:space='preserve')
+        defs
+        g
+          path(fill='#515151', d='M103.3,3.5l-34,34l17.1,17.1l34.1-34c4.7-4.7,4.7-12.4,0-17.1C115.7-1.2,108.1-1.2,103.3,3.5z')
+          path(fill='#515151', d='M80.2,60.9L63,43.8L60.2,41c-1.3-1.3-1.8-3.1-1.3-4.8c0.8-3,1.1-6.2,0.8-9.5c-0.3-3.7-1.3-7.3-3-10.6\
+          c-1.6-3.2-3.9-6.1-6.6-8.5c-2.7-2.4-5.9-4.3-9.3-5.5c-4.5-1.6-9.3-2-14-1.3c-2.4,0.4-3.4,3.4-1.6,5.1l11.7,11.7\
+          c4.7,4.7,5,12.7,0.3,17.4c-2.4,2.4-5.5,3.5-8.6,3.5c-3.1,0-6.2-1.2-8.6-3.6L8,23.1c-0.6-0.6-1.4-0.9-2.1-0.9c-1.4,0-2.8,1-3,2.6\
+          c-0.2,1.3-0.3,2.6-0.3,3.9C2.3,42.9,14.2,56.3,28.5,57.6c0.9,0.1,1.8,0.1,2.7,0.1c2.5,0,4.8-0.3,7.1-0.9c1.8-0.4,3.6,0.1,4.9,1.4\
+          l2.7,2.7l4.8,4.8l7.1,7.1L63,78l38.8,38.8c2.4,2.4,5.5,3.6,8.6,3.6c3.1,0,6.2-1.2,8.6-3.6c4.7-4.7,4.7-12.4,0-17.1L80.2,60.9z')
+          path(fill='#515151', d='M30.5,105.9l-0.2-2.5c-0.1-1.3,0.4-2.5,1.3-3.4l11.7-11.7c0.3-0.3,0.8-0.3,1.1,0c2.4,2.4,6.2,2.4,8.6,0\
+          l3.9-3.9l-4.8-4.8l-3.8-3.8L44.5,72l-4.8-4.8l-3.9,3.9c-2.4,2.4-2.4,6.2,0,8.6c0.3,0.3,0.3,0.8,0,1.1L24,92.5\
+          c-0.9,0.9-2.1,1.4-3.4,1.3l-2.5-0.2c-1-0.1-1.9,0.3-2.6,1.1L0.7,112.9c-1,1.2-0.9,3,0.2,4.1l3.1,3.1l3.1,3.1\
+          c1.1,1.1,2.8,1.2,4.1,0.2l18.2-14.8C30.1,107.8,30.5,106.9,30.5,105.9z')
+      span.q-description
+        | Has the unit ever been opened or repaired before?
+      .q-answers
+        span.help-btn.q-label [help]
+        span.ans-btn.form-option.ans-yes(data-attr="opnd", data-val="1") Y
+        span.ans-btn.form-option.ans-no(data-attr="opnd", data-val="0") N
+
+
+    .q-finish
+      span.err-text
+      button.next-btn Next

@@ -6,8 +6,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
-var sassMiddleware = require('node-sass-middleware');
-
 var config = require('./config');
 var routes = require('./routes/index');
 var quote = require('./routes/quote');
@@ -27,15 +25,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
-app.use(sassMiddleware({
-  src: __dirname,
-  dest: path.join(__dirname, 'public'),
-  debug: true,
-  indentedSyntax: true,
-  outputStyle: 'compressed',
-  prefix: 'css/'
-}))
 
 app.use('/', routes);
 app.use('/quote', quote);

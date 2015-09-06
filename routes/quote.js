@@ -54,13 +54,71 @@ function cleanOrder(obj) {
 
 }
 
+
+function validatePhone(obj, next) {
+
+  var validValues = {model: [1, 2, 3, 4],
+                     color: [1, 2, 3],
+                     capacity: [1, 2, 3],
+                     carrier: [1, 2, 3, 4, 5, 100, 300, 900]}
+
+  console.log(obj)
+
+  for (var key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      try {
+        var toCheck = parseInt(obj[key])
+        if (!(validValues[key].indexOf(toCheck) > -1)) {
+          return next(true);
+        }
+      } catch(err) {
+        return next(true);
+      }
+      
+    }
+  }
+
+  return next(null)
+
+}
+
+function validateIssues(obj, next) {
+
+  console.log(obj)
+
+  for (var key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      try {
+        var toCheck = parseInt(obj[key])
+        if ((toCheck !== 1) && (toCheck !== 0)) {
+          return next(true);
+        }
+      } catch(err) {
+        return next(true);
+      }
+      
+    }
+  }
+
+  return next(null)
+
+}
+
+function validateComponents(obj, next) {
+
+  console.log(obj)
+  next(null)
+
+}
+
+
 router.post("/payment-methods", function (req, res) {
   var nonce = req.body.payment_method_nonce;
   // Use payment method nonce here
 });
 
 
-router.get('/test', function(req, res, next) {
+router.get('/braintree-test', function(req, res, next) {
 
   gateway.customer.create({
     firstName: "Jen",
@@ -80,13 +138,57 @@ router.get('/test', function(req, res, next) {
     }
 
   });
-
-
   
 })
 
+
 router.get('/', function(req, res, next) {
-  res.render('quote')
+  res.render('step1')
+})
+
+router.get('/step1', function(req, res, next) {
+  res.render('step1')
+})
+
+router.post('/step1', function(req, res, next) {
+  validatePhone(req.body, function(err) {
+
+    if (err) return res.sendStatus(400)
+    res.send({url: "http://localhost:3000/quote/step2"})
+
+  })
+  
+})
+
+router.get('/step2', function(req, res, next) {
+  res.render('step2')
+})
+
+router.post('/step2', function(req, res, next) {
+  validateIssues(req.body, function(err) {
+
+    if (err) return res.sendStatus(400)
+    res.send({url: "http://localhost:3000/quote/step3"})
+
+  })
+  
+})
+
+
+router.get('/step3', function(req, res, next) {
+  res.render('step3')
+})
+
+
+router.post('/step3', function(req, res, next) {
+  validateComponents(req.body, function(err) {
+
+    if (err) return res.sendStatus(400)
+
+    res.send({url: "http://localhost:3000/"})
+
+  })
+  
 })
 
 

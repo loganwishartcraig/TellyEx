@@ -1,0 +1,248 @@
+@import "modules/modules.sass"
+
+$selectedColor: #F9A21C
+$genericBorderColor: #D6D5D5
+$hoverColor: #0099C5
+$genericTransitionTime: .2s
+
+
+.global-page-wrapper
+  height: 100%
+
+.nav-about
+  border-color: #2c4151
+
+.form-option:hover
+  border-color: $hoverColor
+
+.q-wrapper 
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+  width: 100%
+  max-width: 750px
+  height: 100%
+  min-height: 310px
+  margin: 0 auto
+  padding: 1em 0
+  
+  box-sizing: border-box
+  text-align: center
+
+.q-header
+  padding-bottom: 1rem
+  border-bottom: 1px solid $genericBorderColor
+  
+
+.section-subhead
+  padding: 1em 0
+  border-bottom: 1px solid $genericBorderColor
+
+.section-indicator
+  padding-top: 1rem
+  color: #A0A0A0
+  font-style: italic
+  
+.q-description
+  font-size: 1.1rem
+  margin-bottom: 2em
+  
+
+
+.q-model-options
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  margin-top: 1rem
+
+  > .q-model
+    width: 23%
+    border: 1px solid transparent
+    border-radius: 5px
+    box-sizing: border-box
+    transition: border $genericTransitionTime ease-in-out
+
+    &:hover
+      border-color: #0099C5
+
+  > .q-model.selected
+    width: 23%
+    border-color: $selectedColor
+
+.q-model-img
+  display: block
+  width: auto
+  max-width: 85%
+  height: 43vh
+  max-height: 245px
+  box-sizing: border-box
+  margin: 0 auto
+  padding: 1rem 0
+
+.q-model-img.six
+  height: 46vh
+  max-height: 260px
+
+.q-model-img.sixp
+  height: 50vh
+  max-height: 280px
+
+.q-model-labels
+  display: flex
+  justify-content: space-between
+  margin-bottom: 1rem
+  padding: 1rem 0
+  border-bottom: 1px solid #D5D5D5
+
+  > span
+    display: block
+    width: 23%
+
+
+.q-details-options
+  display: flex
+  justify-content: space-around
+  align-items: center
+  height: 30vh
+
+  > .q-detail
+    width: 20vh
+    height: 20vh
+    line-height: 20vh
+    vertical-align: middle
+    border-radius: 50%
+    transition: all $genericTransitionTime ease-in-out
+
+
+.q-details-labels
+  display: flex
+  justify-content: space-around
+  align-items: center
+  padding-bottom: 1em
+  margin-bottom: 1em
+  border-bottom: 1px solid #D5D5D5
+
+  > span
+    width: 33.33%
+
+
+.color-black
+  border: 1px solid rgba(32, 32, 32, 0.4)
+  background: rgba(32, 32, 32, 0.25)
+
+.color-silver
+  border: 1px solid rgba(140, 140, 140, 0.4)
+  background: rgba(140, 140, 140, 0.15)
+
+.color-gold
+  border: 1px solid rgba(228, 162, 29, 0.4)
+  background: rgba(228, 162, 29, 0.25)
+
+.color-black.selected
+  background: rgba(32, 32, 32, 0.6)
+
+.color-silver.selected
+  background: rgba(140,140,140,0.6)
+
+.color-gold.selected
+  background: rgba(228,162,29,0.6)
+
+.q-capacity
+  border: 1px solid #202020
+  transition: all $genericTransitionTime ease-in-out
+
+.q-capacity.selected
+  color: $selectedColor
+  border-color: $selectedColor
+
+.q-carrier.selected
+  color: #405A70
+
+
+.q-carrier-options
+  width: 95%
+  margin: 1em auto
+
+.q-carrier-selection-default
+  display: block
+  padding: 1rem 1.5rem
+  font-style: italic
+  color: #ABABAB
+
+.q-carrier-options
+  position: relative
+  border: 1px solid $genericBorderColor
+  border-radius: 5px
+  box-sizing: border-box
+  transition: all $genericTransitionTime ease-in-out
+
+.q-carrier-arrow
+  position: absolute
+  top: 25%
+  right: 5%
+  height: 20px
+  width: 20px
+  border-right: 1px solid $genericBorderColor
+  border-bottom: 1px solid $genericBorderColor
+  transform: rotate(45deg)
+
+.q-carrier-selections
+  overflow: hidden
+  transition: all $genericTransitionTime ease-in-out
+  
+  > .q-carrier
+    border-top: 1px dashed transparent
+    box-sizing: border-box
+    transition: all $genericTransitionTime ease-in-out
+    padding: 1rem 1.5rem
+  
+.q-carrier-options > .q-carrier-selections
+  max-height: 0px
+  
+.q-carrier-options.active
+  box-shadow: 1px 1px 10px 0px rgba(0,0,0,.1)
+  
+  
+.q-carrier-options.active > .q-carrier-selections
+  max-height: 400px
+
+  > .q-carrier
+    border-top: 1px dashed $genericBorderColor
+    box-sizing: border-box
+    
+    &:hover
+      border-color: transparent
+      background: #405A70
+      color: white
+      box-shadow: inset 0px 0px 8px 0px rgba(0, 0, 0, 0.31)
+
+.carrier-description
+  padding-top: 1rem
+  border-top: 1px solid #D5D5D5
+
+
+.q-finish
+  margin-bottom: 4rem
+
+
+.next-btn
+  display: block
+  width: 30%
+  margin: 1.5rem auto
+  padding: 1.5rem 0
+  border: 1px solid #D5D5D5
+  border-radius: 100px  
+  transition: all $genericTransitionTime ease-in-out
+
+  &:hover
+    border-color: $hoverColor
+    color: $hoverColor
+
+.err-text
+  color: red
+  display: block
+  margin: 0 auto
+  width: 100%
+  text-align: center
