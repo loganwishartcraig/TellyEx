@@ -60,18 +60,21 @@ function setValidationError(missed) {
   console.log(missed);
 
   var errString = "";
+  
   var errMessages = {
-    pwr: "if the phone turns on",
-    iCldLk: "if the phones locked to an iCloud account",
-    wtrDmg: "if the phones been affected by water",
-    canRestr: "if the phone can restore through iTunes",
-    noWifi: "if the phone can connect to wi-fi networks",
-    opnd: "if the phones been repaired before"
+    pwr: "Please indicate if the phone turns on",
+    iCldLk: "Please indicate if the phones locked to an iCloud account",
+    wtrDmg: "Please indicate if the phones been affected by water",
+    canRestr: "Please indicate if the phone can restore through iTunes",
+    noWifi: "Please indicate if the phone can connect to wi-fi networks",
+    opnd: "Please indicate if the phones been repaired before"
   };
 
-  for (var i = 0; i < missed.length; i++) {
-    errString += "Please indicate " + errMessages[missed[i]] + ".<br>";
-  }
+
+
+  missed.forEach(function(item, index) {
+    errString += errMessages[item] + "<br>";
+  });
 
   $(".err-text").html(errString);
 

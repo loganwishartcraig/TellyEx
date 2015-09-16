@@ -2,6 +2,7 @@
 
 $selectedColor: #F9A21C
 $genericBorderColor: #D6D5D5
+$headerBackgroundColor: #BEC8CE
 $hoverColor: #0099C5
 $genericTransitionTime: .2s
 
@@ -31,9 +32,13 @@ $genericTransitionTime: .2s
   text-align: center
 
 .q-header
-  padding-bottom: 1rem
-  border-bottom: 1px solid $genericBorderColor
-  
+  padding: 1rem 0
+  background-color: $headerBackgroundColor
+
+  color: white
+  border-radius: 100px
+
+
 
 .section-subhead
   padding: 1em 0
@@ -163,7 +168,11 @@ $genericTransitionTime: .2s
 
 .q-carrier-options
   width: 95%
-  margin: 1em auto
+  margin: 3em auto
+  transition: all $genericTransitionTime ease-in-out
+
+  &:hover
+    border-color: $hoverColor
 
 .q-carrier-selection-default
   display: block
@@ -243,6 +252,6 @@ $genericTransitionTime: .2s
 .err-text
   color: red
   display: block
-  margin: 0 auto
+  margin: 1.5rem auto 0 auto
   width: 100%
   text-align: center

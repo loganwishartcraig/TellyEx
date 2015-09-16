@@ -79,9 +79,7 @@ $pullupHeight: 40px
 
 .blue-bar
   background-color: #678ba9
-  margin: 3rem auto
-  padding-bottom: 1.5rem
-
+  margin-top: 3rem
 
   > .blue-bar-container
     display: flex
@@ -91,10 +89,13 @@ $pullupHeight: 40px
     max-width: 1300px
 
     margin: 0rem auto
-    padding: 5em 0
+    padding: 3rem
 
 
     text-align: center
+
+    > .blue-bar-buttons
+      width: 33.33%
   
     > .blue-bar-buttons > img
       display: block
@@ -102,39 +103,72 @@ $pullupHeight: 40px
       padding-top: 3em
       position: relative
       bottom: 0
-      height: 15vw
+      height: 13vw
       transition: all .2s ease-in-out
       border-bottom: 1px solid tranparent
 
       &:hover
         bottom: 10px
 
-.blue-bar-content-container
+.black-bar
   background-color: #131313
   padding: 1.5rem 0
   box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .75)
+  transition: max-height .2s ease-in-out
 
-  > .blue-bar-content
+  > .placeholder-text
+    display: block
+    text-align: center
+    color: #737373
+    font-style: italic
+
+
+  > .black-bar-content-wrapper
     border-top: 1px dashed #486a85
     border-bottom: 1px dashed #486a85
 
-    > h3, span
+    > .black-bar-header, .black-bar-text
       color: white
       text-align: left
       font-family: 'Open Sans', sans-serif
       margin: 0 auto
 
-    > h3
+    > .black-bar-header
       width: 65%
       padding: 3rem 0
 
-    > span
+    > .black-bar-text
       display: block
       width: 75%
       padding-bottom: 3rem
       line-height: 200%
 
+.black-arrow-container
+  position: relative
+  width: 95%
+  height: 20px
+  max-width: 1300px
+  display: none
 
+  margin: 0rem auto
+
+  &#form > .black-arrow
+    left: calc(1/6*100%)
+
+  &#us > .black-arrow
+    left: 50%
+
+  &#you > .black-arrow
+    left: calc(5/6*100%)
+
+.black-arrow
+  position: absolute
+  height: 0
+  width: 0
+  transition: left .3s ease-in-out
+  border-left: 27px solid transparent
+  border-right: 27px solid transparent
+  border-bottom: 27px solid #131313
 
 // end blue bar block //
 
